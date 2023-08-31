@@ -34,7 +34,7 @@ func updateEnemyAnimation():
 	updateSpriteFlip()
 
 func onChosePlayer():
-	if !isOutOfDetectZone:
+	if !isOutOfDetectZone or enemyIsLookingPlayer:
 		setEnemyPlayerTarget()
 		checkViewObstacles()		
 		if enemyIsLookingPlayer:
@@ -53,4 +53,4 @@ func _on_detection_zone_area_entered(area):
 
 func _on_detection_zone_area_exited(_area):
 	isOutOfDetectZone = true
-	print("por fuera")
+	# print("por fuera")
