@@ -1,0 +1,129 @@
+[gd_scene load_steps=10 format=3 uid="uid://ceutcjief513f"]
+
+[ext_resource type="Script" path="res://scenes/player/player.gd" id="1_o0kj7"]
+[ext_resource type="Texture2D" uid="uid://ba3sx0une1o3x" path="res://resources/megabot_assets_files/Sprites/player/player.png" id="2_2lthb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kcbec"]
+size = Vector2(18, 23)
+
+[sub_resource type="Animation" id="Animation_gnjij"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+
+[sub_resource type="Animation" id="Animation_vuk12"]
+resource_name = "idle_animation"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+
+[sub_resource type="Animation" id="Animation_ldxew"]
+resource_name = "idle_shot_animation"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+
+[sub_resource type="Animation" id="Animation_bkssq"]
+resource_name = "jump_animation"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [11]
+}
+
+[sub_resource type="Animation" id="Animation_x0xe3"]
+resource_name = "walk_animation"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [8, 1, 2, 3, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3g1lc"]
+_data = {
+"RESET": SubResource("Animation_gnjij"),
+"idle_animation": SubResource("Animation_vuk12"),
+"idle_shot_animation": SubResource("Animation_ldxew"),
+"jump_animation": SubResource("Animation_bkssq"),
+"walk_animation": SubResource("Animation_x0xe3")
+}
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_o0kj7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_2lthb")
+hframes = 6
+vframes = 2
+frame = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-1, 2.5)
+shape = SubResource("RectangleShape2D_kcbec")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+speed_scale = 1.2
+libraries = {
+"": SubResource("AnimationLibrary_3g1lc")
+}
+
+[node name="hitbox_player" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox_player"]
+position = Vector2(-1, 2.5)
+shape = SubResource("RectangleShape2D_kcbec")
+
+[node name="shot_spawnpoint" type="Marker2D" parent="."]
+position = Vector2(11, -1)
+
+[connection signal="area_entered" from="hitbox_player" to="." method="_on_hitbox_area_entered"]

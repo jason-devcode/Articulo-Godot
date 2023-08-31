@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgkkoorjttdx6"]
+
+[ext_resource type="Script" path="res://scenes/gui/menu.gd" id="1_b1esg"]
+[ext_resource type="PackedScene" uid="uid://dkl4kcliko03k" path="res://scenes/gui/base_button.tscn" id="2_e2dlj"]
+[ext_resource type="PackedScene" uid="uid://c3knnle6ty240" path="res://scenes/backgrounds/background.tscn" id="2_gejeq"]
+
+[node name="main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b1esg")
+
+[node name="background" parent="." instance=ExtResource("2_gejeq")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -33.0
+offset_right = 150.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Voltman"
+horizontal_alignment = 1
+
+[node name="start_button" parent="VBoxContainer" instance=ExtResource("2_e2dlj")]
+layout_mode = 2
+text = "Start"
+
+[node name="quit_button" parent="VBoxContainer" instance=ExtResource("2_e2dlj")]
+layout_mode = 2
+text = "Quit"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_top = 458.0
+offset_right = 1153.0
+offset_bottom = 648.0
+color = Color(0.603922, 0.12549, 0.47451, 1)
+
+[connection signal="pressed" from="VBoxContainer/start_button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit_button" to="." method="_on_quit_button_pressed"]

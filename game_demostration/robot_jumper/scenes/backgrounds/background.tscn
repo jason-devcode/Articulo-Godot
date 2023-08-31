@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3knnle6ty240"]
+
+[ext_resource type="Script" path="res://background.gd" id="1_iyury"]
+[ext_resource type="Texture2D" uid="uid://bsgbcw7ab5t3l" path="res://resources/megabot_assets_files/Environments/Bay area/layers/background.png" id="3_uai36"]
+
+[node name="background" type="ParallaxBackground"]
+script = ExtResource("1_iyury")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1151, 0)
+
+[node name="Background" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(144, 240)
+scale = Vector2(2, 2)
+texture = ExtResource("3_uai36")
+
+[node name="Background2" type="Sprite2D" parent="ParallaxLayer/Background"]
+position = Vector2(144, 0)
+texture = ExtResource("3_uai36")
+
+[node name="Background3" type="Sprite2D" parent="ParallaxLayer/Background"]
+position = Vector2(288, 0)
+texture = ExtResource("3_uai36")
+
+[node name="Background2" type="Sprite2D" parent="ParallaxLayer/Background/Background3"]
+position = Vector2(144, 0)
+texture = ExtResource("3_uai36")
+
+[node name="Background4" type="Sprite2D" parent="ParallaxLayer/Background"]
+position = Vector2(576, 0)
+texture = ExtResource("3_uai36")
+
+[node name="Background2" type="Sprite2D" parent="ParallaxLayer/Background/Background4"]
+position = Vector2(144, 0)
+texture = ExtResource("3_uai36")
+
+[node name="Background3" type="Sprite2D" parent="ParallaxLayer/Background/Background4"]
+position = Vector2(288, 0)
+texture = ExtResource("3_uai36")
+
+[node name="Background2" type="Sprite2D" parent="ParallaxLayer/Background/Background4/Background3"]
+position = Vector2(144, 0)
+texture = ExtResource("3_uai36")
+
+[node name="ColorRect" type="ColorRect" parent="ParallaxLayer"]
+offset_top = -391.0
+offset_right = 1151.0
+color = Color(0.858824, 0.254902, 0.380392, 1)

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsytwiwan2wbo"]
+
+[ext_resource type="Script" path="res://scenes/player/volt_buster.gd" id="1_7pnmg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4lhma"]
+size = Vector2(13, 4)
+
+[node name="volt_buster" type="StaticBody2D"]
+script = ExtResource("1_7pnmg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6.5, 1)
+shape = SubResource("RectangleShape2D_4lhma")
+
+[node name="volt_buster" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="volt_buster"]
+position = Vector2(6.5, 1)
+shape = SubResource("RectangleShape2D_4lhma")
+
+[node name="ColorRect" type="ColorRect" parent="volt_buster"]
+offset_right = 12.0
+offset_bottom = 2.0

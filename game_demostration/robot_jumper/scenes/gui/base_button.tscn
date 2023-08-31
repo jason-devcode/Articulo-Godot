@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkl4kcliko03k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_umlav"]
+bg_color = Color(0.654902, 0.929412, 0.647059, 0.501961)
+
+[node name="base_button" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_umlav")
+text = "Base button"

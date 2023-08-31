@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://bm176fdi6qih5"]
+
+[ext_resource type="Script" path="res://scenes/enemies/robot_enemy.gd" id="1_iwq74"]
+[ext_resource type="Texture2D" uid="uid://dq5g0ua57hlm5" path="res://resources/megabot_assets_files/Sprites/enemy/enemy2.png" id="2_qqwe3"]
+[ext_resource type="Texture2D" uid="uid://c45nn64ui2rw2" path="res://resources/megabot_assets_files/Sprites/enemy/enemy1.png" id="3_8s5ll"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7oxt"]
+atlas = ExtResource("2_qqwe3")
+region = Rect2(0, 0, 22, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_284yu"]
+atlas = ExtResource("3_8s5ll")
+region = Rect2(0, 0, 22, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pri8b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7oxt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_284yu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5rjgh"]
+radius = 7.07107
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nkj0f"]
+radius = 77.2334
+
+[node name="robot_enemy" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_iwq74")
+metadata/_edit_vertical_guides_ = []
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pri8b")
+autoplay = "default"
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CircleShape2D_5rjgh")
+
+[node name="enemy_hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hitbox"]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_5rjgh")
+
+[node name="DetectionZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionZone"]
+shape = SubResource("CircleShape2D_nkj0f")
+
+[node name="VisionArea" type="Area2D" parent="."]
+
+[node name="RayCast2D" type="RayCast2D" parent="VisionArea"]
+target_position = Vector2(-69, 0)
+collision_mask = 2
+
+[connection signal="area_entered" from="DetectionZone" to="." method="_on_detection_zone_area_entered"]
+[connection signal="area_exited" from="DetectionZone" to="." method="_on_detection_zone_area_exited"]
