@@ -1,82 +1,82 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1693528654
+::res://::1693543688
 background.gd::GDScript::-1::1693519419::0::1::::<>ParallaxBackground<>::
 icon.svg::CompressedTexture2D::6594237791638244834::1693519419::1693528655::1::::<><>::
 player.gd::GDScript::-1::1693519419::0::1::::<>CharacterBody2D<>::
 ::res://resources/::1693522783
 ::res://resources/Mega Bot Music/::1693523014
 public-license.txt::TextFile::-1::1615249997::0::1::::<><>::
-::res://resources/Mega Bot Music/Mega Bot Bay Music/::1693522861
+::res://resources/Mega Bot Music/Mega Bot Bay Music/::1693528654
 Mega Bot Bay.mp3::AudioStreamMP3::508633576913158230::1615958419::1693528654::1::::<><>::
-::res://resources/Mega Bot Music/megabot theme/::1693522900
+::res://resources/Mega Bot Music/megabot theme/::1693528654
 megabot.mp3::AudioStreamMP3::2099814628385156964::1614565906::1693528654::1::::<><>::
 ::res://resources/megabot_assets_files/::1693519419
 public-license.txt::TextFile::-1::1693519419::0::1::::<><>::
-::res://resources/megabot_assets_files/ase files/::1693528605
+::res://resources/megabot_assets_files/ase files/::1693528655
 shot.png::CompressedTexture2D::4992594298499619992::1693519419::1693528655::1::::<><>::
 ::res://resources/megabot_assets_files/Environments/::1693519419
 ::res://resources/megabot_assets_files/Environments/Bay area/::1693519419
-::res://resources/megabot_assets_files/Environments/Bay area/anims/::1693528605
+::res://resources/megabot_assets_files/Environments/Bay area/anims/::1693528655
 water-anim-tank-orange.png::CompressedTexture2D::5498697746496895603::1693519419::1693528655::1::::<><>::
 water-anim-tank-purple.png::CompressedTexture2D::1857011515085003531::1693519419::1693528655::1::::<><>::
 water-anim-tower.png::CompressedTexture2D::8135511987540496839::1693519419::1693528655::1::::<><>::
 water-anim.png::CompressedTexture2D::3809789969446419427::1693519419::1693528655::1::::<><>::
-::res://resources/megabot_assets_files/Environments/Bay area/anims/water-frames/::1693528605
+::res://resources/megabot_assets_files/Environments/Bay area/anims/water-frames/::1693528655
 water-anim1.png::CompressedTexture2D::6682167411909781564::1693519419::1693528655::1::::<><>::
 water-anim2.png::CompressedTexture2D::983785136582046282::1693519419::1693528655::1::::<><>::
 water-anim3.png::CompressedTexture2D::2823208811018738657::1693519419::1693528655::1::::<><>::
-::res://resources/megabot_assets_files/Environments/Bay area/anims/water-orange-frames/::1693528605
+::res://resources/megabot_assets_files/Environments/Bay area/anims/water-orange-frames/::1693528655
 water-anim-tank-orange1.png::CompressedTexture2D::5069423317171259039::1693519419::1693528655::1::::<><>::
 water-anim-tank-orange2.png::CompressedTexture2D::4187789503970115848::1693519419::1693528655::1::::<><>::
 water-anim-tank-orange3.png::CompressedTexture2D::5598729354070565839::1693519419::1693528655::1::::<><>::
-::res://resources/megabot_assets_files/Environments/Bay area/anims/water-purple-frames/::1693528605
+::res://resources/megabot_assets_files/Environments/Bay area/anims/water-purple-frames/::1693528655
 water-anim-tank-purple1.png::CompressedTexture2D::4207109583100815661::1693519419::1693528655::1::::<><>::
 water-anim-tank-purple2.png::CompressedTexture2D::6815720555146748862::1693519419::1693528655::1::::<><>::
 water-anim-tank-purple3.png::CompressedTexture2D::2501118489702458129::1693519419::1693528655::1::::<><>::
-::res://resources/megabot_assets_files/Environments/Bay area/anims/water-tower-frames/::1693528605
+::res://resources/megabot_assets_files/Environments/Bay area/anims/water-tower-frames/::1693528655
 water-anim-tower1.png::CompressedTexture2D::2512534919269966235::1693519419::1693528655::1::::<><>::
 water-anim-tower2.png::CompressedTexture2D::5066825211779839474::1693519419::1693528655::1::::<><>::
 water-anim-tower3.png::CompressedTexture2D::9111474997123348195::1693519419::1693528655::1::::<><>::
-::res://resources/megabot_assets_files/Environments/Bay area/layers/::1693528605
+::res://resources/megabot_assets_files/Environments/Bay area/layers/::1693528655
 background.png::CompressedTexture2D::3662271629232601743::1693519419::1693528655::1::::<><>::
 tileset.png::CompressedTexture2D::7864467105601516105::1693519419::1693528655::1::::<><>::
-::res://resources/megabot_assets_files/Environments/Bay area/previews/::1693528605
+::res://resources/megabot_assets_files/Environments/Bay area/previews/::1693528655
 baysarea-preview-big.png::CompressedTexture2D::2254771489758359842::1693519419::1693528655::1::::<><>::
 baysarea-preview.png::CompressedTexture2D::5107552843368270553::1693519419::1693528655::1::::<><>::
-::res://resources/megabot_assets_files/Environments/twilight area/::1693528605
+::res://resources/megabot_assets_files/Environments/twilight area/::1693528655
 bg.png::CompressedTexture2D::7825415586407441218::1693519419::1693528655::1::::<><>::
 tileset.png::CompressedTexture2D::4517852507339564959::1693519419::1693528655::1::::<><>::
 ::res://resources/megabot_assets_files/Sprites/::1693519419
-::res://resources/megabot_assets_files/Sprites/enemy/::1693528605
+::res://resources/megabot_assets_files/Sprites/enemy/::1693528655
 enemy1.png::CompressedTexture2D::6871063375681325539::1693519419::1693528655::1::::<><>::
 enemy2.png::CompressedTexture2D::8344624880586952410::1693519419::1693528655::1::::<><>::
-::res://resources/megabot_assets_files/Sprites/explosion/::1693528605
+::res://resources/megabot_assets_files/Sprites/explosion/::1693528655
 explosion1.png::CompressedTexture2D::3965093766599139128::1693519419::1693528655::1::::<><>::
 explosion2.png::CompressedTexture2D::5031522986056199376::1693519419::1693528655::1::::<><>::
 explosion3.png::CompressedTexture2D::4514417718631397791::1693519419::1693528655::1::::<><>::
-::res://resources/megabot_assets_files/Sprites/player/::1693528605
+::res://resources/megabot_assets_files/Sprites/player/::1693528655
 player.png::CompressedTexture2D::2445358584513270583::1693519419::1693528655::1::::<><>::
 ::res://scenes/::1693519419
 ::res://scenes/backgrounds/::1693519419
 background.tscn::PackedScene::6759585888389367599::1693519419::0::1::::<><>::res://background.gd<>uid://bsgbcw7ab5t3l
-::res://scenes/enemies/::1693528556
+::res://scenes/enemies/::1693528661
 robot_enemy.gd::GDScript::-1::1693526123::0::1::::<>CharacterBody2D<>::
-robot_enemy.tscn::PackedScene::3284359199991334620::1693528556::0::1::::<><>::res://scenes/enemies/robot_enemy.gd<>uid://dq5g0ua57hlm5::::res://resources/megabot_assets_files/Sprites/enemy/enemy2.png<>uid://c45nn64ui2rw2::::res://resources/megabot_assets_files/Sprites/enemy/enemy1.png
-::res://scenes/gui/::1693528556
+robot_enemy.tscn::PackedScene::3284359199991334620::1693528661::0::1::::<><>::res://scenes/enemies/robot_enemy.gd<>uid://dq5g0ua57hlm5::::res://resources/megabot_assets_files/Sprites/enemy/enemy2.png<>uid://c45nn64ui2rw2::::res://resources/megabot_assets_files/Sprites/enemy/enemy1.png
+::res://scenes/gui/::1693528660
 base_button.tscn::PackedScene::7885637415900536694::1693519419::0::1::::<><>::
 base_menu.tscn::PackedScene::5358580719105991118::1693519419::0::1::::<><>::uid://dkl4kcliko03k
 lifes_container.tscn::PackedScene::3264041635877004946::1693519419::0::1::::<><>::
 menu.gd::GDScript::-1::1693519419::0::1::::<>Control<>::
-menu.tscn::PackedScene::5215251139820964705::1693528556::0::1::::<><>::res://scenes/gui/menu.gd<>uid://dkl4kcliko03k::::res://scenes/gui/base_button.tscn<>uid://c3knnle6ty240::::res://scenes/backgrounds/background.tscn<>uid://46fv1af2ejcm::::res://resources/Mega Bot Music/megabot theme/megabot.mp3
+menu.tscn::PackedScene::5215251139820964705::1693528660::0::1::::<><>::res://scenes/gui/menu.gd<>uid://dkl4kcliko03k::::res://scenes/gui/base_button.tscn<>uid://c3knnle6ty240::::res://scenes/backgrounds/background.tscn<>uid://46fv1af2ejcm::::res://resources/Mega Bot Music/megabot theme/megabot.mp3
 ui.tscn::PackedScene::7121099917149294005::1693519419::0::1::::<><>::
-::res://scenes/player/::1693528556
+::res://scenes/player/::1693528661
 player.gd::GDScript::-1::1693519419::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::5096041976728119909::1693528556::0::1::::<><>::res://scenes/player/player.gd<>uid://ba3sx0une1o3x::::res://resources/megabot_assets_files/Sprites/player/player.png
+player.tscn::PackedScene::5096041976728119909::1693528661::0::1::::<><>::res://scenes/player/player.gd<>uid://ba3sx0une1o3x::::res://resources/megabot_assets_files/Sprites/player/player.png
 volt_buster.gd::GDScript::-1::1693519419::0::1::::<>StaticBody2D<>::
 volt_buster.tscn::PackedScene::8473399667180748592::1693519419::0::1::::<><>::res://scenes/player/volt_buster.gd
-::res://scenes/worlds/::1693528556
+::res://scenes/worlds/::1693528661
 world_1.gd::GDScript::-1::1693519419::0::1::::<>Node2D<>::
-world_1.tscn::PackedScene::7472595554159166401::1693528556::0::1::::<><>::res://scenes/worlds/world_1.gd<>uid://b5mqmutfae2qt::::res://resources/megabot_assets_files/Environments/twilight area/tileset.png<>uid://dkbuvhugvhgg4::::res://resources/megabot_assets_files/Environments/Bay area/layers/tileset.png<>uid://ceutcjief513f::::res://scenes/player/player.tscn<>uid://c3knnle6ty240::::res://scenes/backgrounds/background.tscn<>uid://bm176fdi6qih5::::res://scenes/enemies/robot_enemy.tscn<>uid://hinedr8blfwo::::res://resources/Mega Bot Music/Mega Bot Bay Music/Mega Bot Bay.mp3
+world_1.tscn::PackedScene::7472595554159166401::1693528661::0::1::::<><>::res://scenes/worlds/world_1.gd<>uid://b5mqmutfae2qt::::res://resources/megabot_assets_files/Environments/twilight area/tileset.png<>uid://dkbuvhugvhgg4::::res://resources/megabot_assets_files/Environments/Bay area/layers/tileset.png<>uid://ceutcjief513f::::res://scenes/player/player.tscn<>uid://c3knnle6ty240::::res://scenes/backgrounds/background.tscn<>uid://bm176fdi6qih5::::res://scenes/enemies/robot_enemy.tscn<>uid://hinedr8blfwo::::res://resources/Mega Bot Music/Mega Bot Bay Music/Mega Bot Bay.mp3
 world_base.tscn::PackedScene::7472595554159166401::1693519419::0::1::::<><>::uid://ceutcjief513f
 ::res://scripts/::1693519419
 ::res://scripts/Global/::1693519419

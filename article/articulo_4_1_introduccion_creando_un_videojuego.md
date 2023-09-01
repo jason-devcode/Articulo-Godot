@@ -22,9 +22,10 @@ Este artículo está subdivido en 5 partes dónde en cada parte nos enfocamos en
 
 * [Parte 1: Introducción](articulo_4_1_introduccion_creando_un_videojuego.md)
 2. [Parte 2: Agregando los recursos para nuestro videojuego](articulo_4_2_descarga_asset_pack.md)
-3. [Parte 3: Creando la escena Player de nuestro personaje](articulo_4_3_escena_player.md)
-4. [Parte 4: Creando la escena Mundo](artiuclo_4_4_escena_mundo.md)
-5. [Parte 5: Creación de la escena enemigo](articulo_4_5_escena_enemigo.md)
+3. [Parte 3: Creando la escena Player de nuestro personaje parte 1](articulo_4_3_escena_player_parte_1.md)
+4. [Parte 4: Creando la escena Mundo](articulo_4_4_escena_mundo.md)
+5. [Parte 5: Creando la escena Player de nuestro personaje parte 2](articulo_4_5_escena_player_parte_2.md)
+6. [Parte 6: Creación de la escena enemigo](articulo_4_6_escena_enemigo.md)
 
 **¡Empezemos!**
 

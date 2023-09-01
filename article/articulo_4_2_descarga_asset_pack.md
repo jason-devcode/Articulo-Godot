@@ -45,5 +45,5 @@ Una vez tenemos la carpeta con los assets en la carpeta de nuestro proyecto, ent
 En esta parte hemos aprendido a cómo descargar el asset pack que utilizaremos en el desarrollo de nuestro videojuego y como agregarlo a nuestro proyecto godot.
 
 ## Siguiente parte:
-[Parte 3: Creando la escena Player de nuestro personaje](articulo_4_3_escena_player.md)
+[Parte 3: Creando la escena Player de nuestro personaje](articulo_4_3_escena_player_parte_1.md)
 
