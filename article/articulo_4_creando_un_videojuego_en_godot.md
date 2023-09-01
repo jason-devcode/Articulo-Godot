@@ -15,9 +15,12 @@ En el [artículo anterior](articulo_3_nodos_y_escenas.md) aprendimos lo básico 
 
 **¡Empezemos!**
 
+
 ## Creando el proyecto para nuestro videojuego
 Primero vamos a crear el proyecto para nuestro primer videojuego en Godot, en el [segundo artículo de esta serie](articulo_2_introduccion_a_godot.md#creando-un-nuevo-proyecto-en-godot) vimos cómo crear un proyecto en Godot por lo que en este artículo no vamos a profundizar mucho en esta parte.
 ![project_creation_popup](resources/project_creation_popup.png)
+
+
 
 ### Veamos una breve introduccion a la interfaz grafica del editor
 
@@ -37,16 +40,49 @@ En este artículo nos centraremos principalmente en la opción de 2D y la opció
 Seleccionamos la opción 2D y nos quedará de la siguiente forma:
 ![top_option_2d_selected](resources/top_option_2d_selected.png)
 
-Podremos observar varios paneles de edicion de nodos y escenas, administracion de archivos, e incluso un panel de pestanas para la edicion de animaciones, audio, tilesets, tilemaps, y realizar pruebas de nuestros videojuegos mediante depuraciones.
+Podremos observar varios paneles de edición de nodos y escenas, administración de archivos, e incluso un panel de pestañas para la edición de animaciones, audio, tilesets, tilemaps, y realizar pruebas de nuestros videojuegos mediante depuraciones.
 
-En este articulo no vamos a profundizar mucho en cada uno de los componentes de la interfaz grafica del editor de Godot mas alla de los que vamos a utilizar en este articulo, por lo si quieres aprender mas sobre cada uno de estos documentos te recomiendo leer la [documentacion oficial de godot](https://docs.godotengine.org/es/stable/getting_started/introduction/first_look_at_the_editor.html) o buscar tutoriales y cursos en linea.
+En este artículo no vamos a profundizar mucho sobre cada uno de los componentes de la interfaz gráfica del editor de Godot más allá de los que vamos a utilizar, por lo que si quieres aprender más sobre cada uno de estos componentes te recomiendo leer la [documentación óficial de godot sobre la interfaz gráfica](https://docs.godotengine.org/es/stable/getting_started/introduction/first_look_at_the_editor.html) o buscar tutoriales y cursos en linea.
+
+
 
 ## Comencemos a crear nuestro primer videojuego
-Ahora que ya hemos visto una breve una introduccion a la interfaz grafica del editor de Godot, podemos comenzar a crear nuestro propio videojuego con las herramientas que nos ofrece Godot, para eso antes de comenzar veremos cuales son los elementos que crearemos que contendra nuestro videojuego:
+
+Ahora que ya hemos visto una breve una introducción a la interfaz gráfica del editor de Godot y tenemos una noción de los conceptos básicos de Godot, podemos comenzar a crear nuestro propio videojuego con las herramientas que nos ofrece. 
+
+Antes de comenzar veamos cuales serán los elementos básicos que tendrá nuestro videojuego:
 
 1. Un personaje jugable
 2. Un nivel con un gameplay basico
 3. Enemigos con mecanicas sencillas
+
+Descargaremos también un paqueté de recursos(assets pack) de sprites para la creación de nuestro videojuego, en este caso utilizaré el asset pack del proyecto [Mega Bot](https://ansimuz.itch.io/mega-bot) que es un videojuego al estilo Mega Man.
+
+Enlace: https://ansimuz.itch.io/mega-bot
+
+![megabot_asset_pack](resources/megabot_asset_pack.png)
+
+Daremos click izquierdo en el bóton que dice **Dowload Now** y luego si no queremos donar, damos click dónde dice **No thanks, just take me to the downloads**, y los enviará a la siguiente página: 
+
+![megabot_asset_file_download_page](resources/megabot_asset_file_download_page.png)
+
+Descargaremos el archivo que dice megabot asset files.zip: 
+
+![asset_file_download](resources/asset_file_download.png)
+
+Una vez descargado, lo descomprimimos, quedandonos la siguiente carpeta:
+
+![megabot_asset_files_folder](resources/megabot_asset_files_folder.png)
+
+En el interior de esa carpeta encontraremos otra carpeta del mismo nombre, esa carpeta la copiaremos en la carpeta de nuestro proyecto en godot y nos debe de quedar de la siguiente manera:
+
+![project_folder_after_copy](resources/project_folder_after_copy.png)
+
+Una vez tenemos la carpeta con los assets en la carpeta de nuestro proyecto, volvemos a godot y revisamos en el panel de exploración de archivos de nuestro proyecto si todo salío bien se debería de ver así:
+
+![check_project_folder_assets](resources/check_project_folder_assets.png)
+
+
 
 
 ## Creando la escena Player
@@ -99,31 +135,7 @@ Como podemos ver el nuevo nodo que acabamos de crear se a creado adentro del nod
 
 Los nodos Sprite2D con este tipo de nodos podemos darle el aspecto gráfico que tendran nuestros personajes o enemigos.
 
-Bien, ahora que hemos creado el nodo Sprite2D, lo siguiente será asignarle la imagen o textura del aspecto gráfico de nuestro personaje, en mi caso voy a utilizar un sprite sheet del personaje MegaBot del asset pack de sprites gratuitos y de libre uso del proyecto MegaBot:
-
-Enlace: https://ansimuz.itch.io/mega-bot
-
-![megabot_asset_pack](resources/megabot_asset_pack.png)
-
-Daremos click izquierdo en el bóton que dice **Dowload Now** y luego si no queremos donar, damos click dónde dice **No thanks, just take me to the downloads**, y los enviará a la siguiente página: 
-
-![megabot_asset_file_download_page](resources/megabot_asset_file_download_page.png)
-
-Descargaremos el archivo que dice megabot asset files.zip: 
-
-![asset_file_download](resources/asset_file_download.png)
-
-Una vez descargado, lo descomprimimos, quedandonos la siguiente carpeta:
-
-![megabot_asset_files_folder](resources/megabot_asset_files_folder.png)
-
-En el interior de esa carpeta encontraremos otra carpeta del mismo nombre, esa carpeta la copiaremos en la carpeta de nuestro proyecto en godot y nos debe de quedar de la siguiente manera:
-
-![project_folder_after_copy](resources/project_folder_after_copy.png)
-
-Una vez tenemos la carpeta de assets en la de nuestro proyecto, volvemos a godot y revisamos en el panel de exploración de archivos de nuestro proyecto si todo salío bien se debería de ver así:
-
-![check_project_folder_assets](resources/check_project_folder_assets.png)
+Bien, ahora que hemos creado el nodo Sprite2D, lo siguiente será asignarle la imagen o textura del aspecto gráfico de nuestro personaje, en mi caso voy a utilizar un sprite sheet del personaje MegaBot del asset pack que descargamos.
 
 Vamos ahora a desplegar esa carpeta y en su interior nos deberían de aparecer otras 3 carpetas:
 

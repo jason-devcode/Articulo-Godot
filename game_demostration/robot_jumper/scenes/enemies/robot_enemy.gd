@@ -34,7 +34,8 @@ func updateEnemyAnimation():
 	updateSpriteFlip()
 
 func onChosePlayer():
-	if !isOutOfDetectZone or enemyIsLookingPlayer:
+	#if !isOutOfDetectZone or enemyIsLookingPlayer:
+	if !isOutOfDetectZone:
 		setEnemyPlayerTarget()
 		checkViewObstacles()		
 		if enemyIsLookingPlayer:
@@ -52,5 +53,11 @@ func _on_detection_zone_area_entered(area):
 		isOutOfDetectZone = false
 
 func _on_detection_zone_area_exited(_area):
-	isOutOfDetectZone = true
-	# print("por fuera")
+	if _area.name == "hitbox_player":
+		isOutOfDetectZone = true
+
+
+
+
+
+
