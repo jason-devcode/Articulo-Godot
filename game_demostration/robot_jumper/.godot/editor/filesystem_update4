@@ -2,4 +2,3 @@ res://scenes/gui/menu.tscn
 res://scenes/player/player.tscn
 res://scenes/worlds/world_1.tscn
 res://scenes/enemies/robot_enemy.tscn
-res://scenes/enemies/robot_enemy.gd

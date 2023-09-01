@@ -611,7 +611,7 @@ position_smoothing_enabled = true
 position = Vector2(62, 208)
 
 [node name="robot_enemy2" parent="TileMap/Enemies" instance=ExtResource("6_qjrk8")]
-position = Vector2(210, 303)
+position = Vector2(212, 303)
 
 [node name="robot_enemy3" parent="TileMap/Enemies" instance=ExtResource("6_qjrk8")]
 position = Vector2(619, 308)
