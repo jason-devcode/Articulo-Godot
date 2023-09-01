@@ -34,7 +34,7 @@ grow_vertical = 2
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 60
-text = "Voltman"
+text = "Volt Man"
 horizontal_alignment = 1
 
 [node name="start_button" parent="VBoxContainer" instance=ExtResource("2_e2dlj")]
@@ -52,9 +52,10 @@ offset_right = 1153.0
 offset_bottom = 648.0
 color = Color(0.603922, 0.12549, 0.47451, 1)
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_y6x54")
 autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/start_button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/quit_button" to="." method="_on_quit_button_pressed"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

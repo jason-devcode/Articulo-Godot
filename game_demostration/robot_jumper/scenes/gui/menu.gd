@@ -4,6 +4,7 @@ const MAX_NUM_WORLDS = 1
 
 @onready var sceneTree: SceneTree = get_tree()
 @onready var startButton: Button = $VBoxContainer/start_button
+@onready var menuAudioTheme: AudioStreamPlayer = $AudioStreamPlayer
 
 @export var currentWorldLevel = 1
 
@@ -22,3 +23,6 @@ func _on_select_world_button_pressed():
 
 func _on_quit_button_pressed():
 	sceneTree.quit()
+
+func _on_audio_stream_player_finished():
+	menuAudioTheme.play()
