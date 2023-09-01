@@ -3,12 +3,11 @@
 
 ![viewport_zoom_slide](resources/viewport_zoom_slide.png)
 
-
-[Introducción](#introducción)
-[Descargando el asset pack](#descargando-el-asset-pack)
-[Agregando el asset pack a nuestro proyecto](#agregando-el-asset-pack-a-nuestro-proyecto)
-[Conclusión](#conclusión)
-[Siguiente parte](#siguiente-parte)
+- [Introducción](#introducción)
+- [Descargando el asset pack](#descargando-el-asset-pack)
+- [Agregando el asset pack a nuestro proyecto](#agregando-el-asset-pack-a-nuestro-proyecto)
+- [Conclusión](#conclusión)
+- [Siguiente parte](#siguiente-parte)
 
 ## Introducción
 Ahora que ya hemos visto una breve una introducción a la interfaz gráfica del editor de Godot y tenemos una noción de los conceptos básicos de Godot, podemos comenzar a crear nuestro propio videojuego con las herramientas que nos ofrece. 
