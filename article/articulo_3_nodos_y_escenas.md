@@ -22,7 +22,7 @@ Ahora en este artículo veremos unos de los conceptos más importantes y fundame
 Godot Engine nos ofrece un sistema de escenas y nodos versátiles y fléxbiles, los cuáles constituyen toda la estructura, funcionamiento y organización de nuestros proyectos en Godot.
 
 ### ¿Qué es un nodo?
-Los nodos son los bloques de construcción que componen todos los elementos de nuestros videojuegos, como los enemigos, el mapa, el jugador, las texturas, los sonidos, etc. Además un mismo nodo se puede reutilizar la cantidad de veces que sea requerido y a su vez también pueden contener a otros nodos que complementen sus características y funcionalidades, verémos ejemplos detallados con demostraciones en el [Siguiente artículo](articulo_4_creando_un_videojuego_en_godot.md).
+Los nodos son los bloques de construcción que componen todos los elementos de nuestros videojuegos, como los enemigos, el mapa, el jugador, las texturas, los sonidos, etc. Además un mismo nodo se puede reutilizar la cantidad de veces que sea requerido y a su vez también pueden contener a otros nodos que complementen sus características y funcionalidades, verémos ejemplos detallados con demostraciones en el [Siguiente artículo](articulo_4_1_introduccion_creando_un_videojuego.md).
 
 Ejemplo de una lista de nodos de Godot:
 ![node_types_example](resources/node_types_example.png)
@@ -50,6 +50,6 @@ En este artículo hemos aprendido sobre los conceptos fundamentales de nodo y es
 En el siguiente artículo veremos cómo crear nuestro primer videojuego 2D en godot
 y verémos en práctica los conceptos de nodo y escena:
 
-[Godot Engine 4: Crea tú primer videojuego con Godot Engine 4 desdé cero](articulo_4_creando_un_videojuego_en_godot.md)
+[Godot Engine 4: Crea tú primer videojuego con Godot Engine 4 desdé cero](articulo_4_1_introduccion_creando_un_videojuego.md)
 
 

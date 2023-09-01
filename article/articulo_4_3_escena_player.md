@@ -1,91 +1,6 @@
 # Godot Engine 4: Crea tú primer videojuego con Godot Engine 4 desdé cero
+## Parte 3: Creando la escena Player de nuestro personaje
 
-![game_demostration_1](resources/game_demostration_1.png)
-
-- [Introducción](#introducción)
-- [Creando el proyecto para nuestro videojuego](#creando-el-proyecto-para-nuestro-videojuego)
-- [Una breve introduccion a la interfaz grafica del editor de godot](#veamos-una-breve-introduccion-a-la-interfaz-grafica-del-editor)
-- [Comencemos a crear nuestro primer videojuego](#comencemos-a-crear-nuestro-primer-videojuego)
-- [Creando la escena player](#creando-la-escena-player)
-- [Dándole apariencia a nuestro personaje](#dándole-apariencia-a-nuestro-personaje)
-- [Conclusión]
-
-## Introducción
-En el [artículo anterior](articulo_3_nodos_y_escenas.md) aprendimos lo básico sobre los nodos y las escenas, sin embargo no vimos como crearlos y utilizarlos, en este artículo vamos crear nuestro primer videojuego con todo lo que hemos visto hasta ahora, veremos por ejemplo como crear las escenas y nodos para el jugador, los enemigos, y un nivel usandola para demostrar como funcionan las **estructuras de escenas y nodos** en Godot.
-
-**¡Empezemos!**
-
-
-## Creando el proyecto para nuestro videojuego
-Primero vamos a crear el proyecto para nuestro primer videojuego en Godot, en el [segundo artículo de esta serie](articulo_2_introduccion_a_godot.md#creando-un-nuevo-proyecto-en-godot) vimos cómo crear un proyecto en Godot por lo que en este artículo no vamos a profundizar mucho en esta parte.
-![project_creation_popup](resources/project_creation_popup.png)
-
-
-
-### Veamos una breve introduccion a la interfaz grafica del editor
-
-Una vez hemos creado nuestro proyecto, deberá aparecernos una interfaz como la siguiente:
-![godot_init_project_interface](resources/godot_init_project_interface.png)
-
-En la parte superior veremos un panel con las siguientes opciones: 
-
-![top_options_panel](resources/top_options_panel.png)
-* La opción 2D es para utilizar el editor de escenas 2D.
-* La opción 3D es para utilizar el editor de escenas 3D.
-* La opción Scripts es para abrir la interfaz del editor de scripts.
-* La opción Asset Libs es para abrir el navegador de assets y librerías en línea qué podemos utilizar en nuestro proyecto.
-
-En este artículo nos centraremos principalmente en la opción de 2D y la opción Scripts.
-
-Seleccionamos la opción 2D y nos quedará de la siguiente forma:
-![top_option_2d_selected](resources/top_option_2d_selected.png)
-
-Podremos observar varios paneles de edición de nodos y escenas, administración de archivos, e incluso un panel de pestañas para la edición de animaciones, audio, tilesets, tilemaps, y realizar pruebas de nuestros videojuegos mediante depuraciones.
-
-En este artículo no vamos a profundizar mucho sobre cada uno de los componentes de la interfaz gráfica del editor de Godot más allá de los que vamos a utilizar, por lo que si quieres aprender más sobre cada uno de estos componentes te recomiendo leer la [documentación óficial de godot sobre la interfaz gráfica](https://docs.godotengine.org/es/stable/getting_started/introduction/first_look_at_the_editor.html) o buscar tutoriales y cursos en linea.
-
-
-
-## Comencemos a crear nuestro primer videojuego
-
-Ahora que ya hemos visto una breve una introducción a la interfaz gráfica del editor de Godot y tenemos una noción de los conceptos básicos de Godot, podemos comenzar a crear nuestro propio videojuego con las herramientas que nos ofrece. 
-
-Antes de comenzar veamos cuales serán los elementos básicos que tendrá nuestro videojuego:
-
-1. Un personaje jugable
-2. Un nivel con un gameplay basico
-3. Enemigos con mecanicas sencillas
-
-Descargaremos también un paqueté de recursos(assets pack) de sprites para la creación de nuestro videojuego, en este caso utilizaré el asset pack del proyecto [Mega Bot](https://ansimuz.itch.io/mega-bot) que es un videojuego al estilo Mega Man.
-
-Enlace: https://ansimuz.itch.io/mega-bot
-
-![megabot_asset_pack](resources/megabot_asset_pack.png)
-
-Daremos click izquierdo en el bóton que dice **Dowload Now** y luego si no queremos donar, damos click dónde dice **No thanks, just take me to the downloads**, y los enviará a la siguiente página: 
-
-![megabot_asset_file_download_page](resources/megabot_asset_file_download_page.png)
-
-Descargaremos el archivo que dice megabot asset files.zip: 
-
-![asset_file_download](resources/asset_file_download.png)
-
-Una vez descargado, lo descomprimimos, quedandonos la siguiente carpeta:
-
-![megabot_asset_files_folder](resources/megabot_asset_files_folder.png)
-
-En el interior de esa carpeta encontraremos otra carpeta del mismo nombre, esa carpeta la copiaremos en la carpeta de nuestro proyecto en godot y nos debe de quedar de la siguiente manera:
-
-![project_folder_after_copy](resources/project_folder_after_copy.png)
-
-Una vez tenemos la carpeta con los assets en la carpeta de nuestro proyecto, volvemos a godot y revisamos en el panel de exploración de archivos de nuestro proyecto si todo salío bien se debería de ver así:
-
-![check_project_folder_assets](resources/check_project_folder_assets.png)
-
-
-
-
-## Creando la escena Player
 ![scene_player](resources/scene_player_structure_scene.png)
 
 Vamos ahora a crear la escena player o jugador de nuestro personaje.
@@ -223,17 +138,6 @@ Y si todo sale bien, como podemos observar ahora nuestro personaje se verá así
 ### Colisiones de nuestro personaje
 ### Moviendo a nuestro personaje
 ### Animando a nuestro personaje
-
-## Creando la escena World
-### Añadiendo nuestro personaje a la escena World
-### Creando y diseñando el mapa
-### Añadiendo colisiones al mapa
-### Añadiendo un fondo al mapa
-
-## Creando la escena enemigo
-
-
-## Conclusión
 
 
 
