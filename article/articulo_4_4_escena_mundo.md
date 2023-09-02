@@ -1,8 +1,8 @@
 # Godot Engine 4: Crea tú primer videojuego con Godot Engine 4 desdé cero
-## Parte 4: Creando la escena Mundo
+## Parte 4: Creando la escena world
 
 - [Introducción](#introducción)
-- [Creando la escena Mundo](#creando-la-escena-world)
+- [Creando la escena world](#creando-la-escena-world)
 - [Creando y diseñando el mapa](#creando-y-diseñando-el-mapa)
 - [TileMaps y TileSets](#tilemaps-y-tilesets)
 - [Creando el TileMap de nuestro mapa](#creando-el-tilemap-de-nuestro-mapa)
@@ -12,12 +12,13 @@
 - [Añadiendo colisiones a los tiles](#añadiendo-colisiones-a-los-tiles)
 - [Diseñando el mapa](#diseñando-el-mapa)
 - [Añadiendo nuestro personaje a la escena World](#añadiendo-nuestro-personaje-a-la-escena-world)
+- [Añadiendo una cámara 2D](#añadiendo-una-cámara-2d)
 - [Añadiendo un fondo al mapa](#añadiendo-un-fondo-al-mapa)
 - [Conclusión](#conclusión)
 - [Siguiente parte](#siguiente-parte)
 
 ### Introducción
-Luego de haber creado la escena de nuestro personaje, necesitaremos un lugar dónde poder hacer pruebas con las nuevas mecánicas que implementaremos más adelante a nuestro personaje, por lo que para eso necesitaremos una escena Mundo donde colocaremos a nuestro personaje.
+Luego de haber creado la escena de nuestro personaje, necesitaremos un lugar dónde poder hacer pruebas con las nuevas mecánicas que implementaremos más adelante a nuestro personaje, por lo que para eso necesitaremos una escena world donde colocaremos a nuestro personaje.
 
 ### Creando la escena World
 Primero vamos a crear una nueva escena, para eso nos vamos al panel de pestañas en la parte superior del viewport y daremos click izquierdo sobre el botón con el símbolo **+**:
@@ -32,7 +33,7 @@ Ahora, en el panel de edición de escenas, vamos a dar click izquierdo en la opc
 
 ![click_2d_scene](resources/click_2d_scene.png)
 
-Eso nos creará un nodo de tipo Node2D qué será dónde crearemos toda la estructura de nodos de la escena Mundo:
+Eso nos creará un nodo de tipo Node2D qué será dónde crearemos toda la estructura de nodos de la escena world:
 
 ![create_world_node_2d](resources/create_world_node_2d.png)
 
@@ -41,7 +42,7 @@ Eso nos creará un nodo de tipo Node2D qué será dónde crearemos toda la estru
 Una vez hemos creado la escena en la que vamos a crear el mundo de nuestro videojuego, vamos comenzar a diseñar el mapa.
 
 ### TileMaps y TileSets
-Para diseñar nuestro mapa vamos a utilizar un tipo de nodo especial llamado TileMap, los tilemaps son cuadrículas o mapas de mosaicos(tiles) en la que cada casilla o mosaico es un elemento que conforma el diseño o patrón gráfico de alguna zona del mapa tal como si fueran las fichas de un rompecabezas, dónde cada ficha es un **tile** con un patrón o diseño específico y el rompecabezas sería el **tilemap**. Los diseños o patrónes de estos mosaicos conforman el TileSet o conjunto de mosaicos en el cuál podemos disponer de una gran variedad de mosaicos con diferentes patrónes y propiedades que podemos utilizar para diseñar el tilemap del mapa de la escena mundo de nuestro videojuego. 
+Para diseñar nuestro mapa vamos a utilizar un tipo de nodo especial llamado TileMap, los tilemaps son cuadrículas o mapas de mosaicos(tiles) en la que cada casilla o mosaico es un elemento que conforma el diseño o patrón gráfico de alguna zona del mapa tal como si fueran las fichas de un rompecabezas, dónde cada ficha es un **tile** con un patrón o diseño específico y el rompecabezas sería el **tilemap**. Los diseños o patrónes de estos mosaicos conforman el TileSet o conjunto de mosaicos en el cuál podemos disponer de una gran variedad de mosaicos con diferentes patrónes y propiedades que podemos utilizar para diseñar el tilemap del mapa de la escena world de nuestro videojuego. 
 Para profundizar más sobré los tilemaps y tilesets en godot recomiendo leer la [documentación oficial sobre tilemaps y tilesets de godot](https://docs.godotengine.org/es/stable/tutorials/2d/using_tilemaps.html).
 
 ### Creando el TileMap de nuestro mapa
@@ -76,7 +77,7 @@ Bien con eso ya tendríamos creado el TileSet para nuestro TileMap y nos aparece
 
 ![tileset_panel_editor](resources/tileset_panel_editor.png)
 
-Ahora lo siguiente será cargar el sprite sheet del diseño o patrón de los tiles que usaremos para diseñar el mapa de la escena mundo.
+Ahora lo siguiente será cargar el sprite sheet del diseño o patrón de los tiles que usaremos para diseñar el mapa de la escena world.
 
 Para eso buscaremos en el panel de explorador de archivos de nuestro proyecto la imagen con el sprite sheet del diseño de los tiles que vamos a utilizar:
 
@@ -132,19 +133,65 @@ Lo siguiente será comenzar a seleccionar uno a uno los tiles del tileset a los 
 
 ![selecting_tiles](resources/selecting_tiles.gif)
 
+Una vez hemos seleccionado los tiles a los que vamos a agregarle las colisiones daremos click izquierdo en la opción **Physics** que noes desplegará el siguiente submenu:
 
+![click_physics](resources/click_physics.png)
+
+Luego daremos click en **Physics Layer 0** y presionaremos la tecla **f** en el teclado, eso hará que se genere una forma de colisión rectangular para cada uno de los tiles que seleccionamos muy bien ahora los tiles de nuestro TileSet tienen colisiones lo que significa que el personaje y los enemigos de nuestro videojuego van a poder chocar e interactuar con ellos.
 
 ### Diseñando el mapa
 
+Ahora que ya hemos creado el nodo TileMap, creado el TileSet, y agregado colisiones a los tiles que vamos a utilizar, podemos comenzar a el TileMap de nuestro mapa.
+
+Para eso vamos a seleccionar el nodo TileMap y vamos a abrir el editor de TileMaps que lo podemos encontrar enseguida del editor de TileSet:
+
+![tilemap_editor](resources/tilemap_editor.png)
+
+Lo que harémos ahora será dar click izquierdo en alguno de los tiles que queremos seleccionar para comenzar a diseñar nuestro nivel, una vez seleccionado lo que haremos será posicionarnos en el viewport para comenzar a colocar los tiles, para colocarlos sólo hacemos click izquierdo en la parte donde queremos comenzar a diseñar el mapa:
+
+![map_design](resources/map_design.gif)
+
+Recomiendo que a la hora de diseñar su mapa trabajen en la zona rectangular en el interior del rectángulo azul ya que es la zona visible a nuestra pantalla y podremos darnos una idea de las dimensiones de nuestro mapa.
+
+Ahora que sabemos colocar tiles en nuestro TileMap para diseñar el mapa, podremos seguir añadiendo los detalles que queramos:
+
+![tilemap_design](resources/tilemap_design.png)
+
+Antes de continuar, vamos a guardar la escena world, en la carpeta scenes que creamos para guardar en una carpeta player la escena player de neustro personaje, vamos a crear una carpeta world y ahí guardaremos la escena con el nombre world.tscn:
+
+![save_world_scene](resources/save_world_scene.png)
 
 
 ### Añadiendo nuestro personaje a la escena World
 
+Lo siguiente que haremos será agregar la escena player de nuestro jugador a la escena World.
+
+Para hacer eso, lo que debemos hacer es ir al panel de exploración de archivos de nuestro proyecto y buscaremos el archivo player.tscn que es el que contiene la escena player del personaje:
+
+![find_player_scene_file](resources/find_player_scene_file.png)
+
+Ahora lo que vamos a hacer será similar a lo que hicimos cuándo le colocamos el sprite sheet a nuestro personaje, mantendremos click izquierdo sobre el archivo player.tscn y lo arrastraremos hasta el nodo TileMap en el editor de nodos Scene y lo posicionaremos en el mapa:
+
+![add_player_to_world_scene](resources/add_player_to_world_scene.gif)
+
+### Añadiendo una cámara 2D
+
+Después de agregar a nuestro personaje a la escena, necesitaremos añadir también otro elemento muy importante, la cámara, con la cámara podremos visualizar de forma constante una región del mapa dependiendo de en donde se situe la cámara y el tamaño de su área de visualización. 
+Para que una cámara pueda seguir a nuestro personaje lo que tendremos que hacer será crear un nodo de tipo Camera2D y anidar ese nodo en el de la escena de nuestro personaje, de ese modo la cámara tomará como posición o marco de referencia la posición de nuestro personaje en el mapa y se moverá cuándo se mueva el personaje:
+
+![add_camera_to_world](resources/add_camera_to_world.gif)
 
 
+### Añadiendo un fondo al mapa
+
+Por último, vamos a añadir un fondo estático a nuestro mapa, para hacerlo vamos a hacer lo casi lo mismo que hicimos para agregar la escena player a nuestro mapa, buscaremos la imagen con el fondo que queremos que tenga el mapa, la arrastramos al viewport, la vamos a posicionar y ajustar al tamaño de nuestro mapa:
+
+![add_static_background](resources/add_static_background.gif)
+
+Luego de posicionar y ajustar el fondo, lo que debemos hacer será posicionar también el nodo del fondo a la parte superior por encima del nodo TileMap, para que el TileMap y el resto de componentes se pinten sobre el. 
 
 ### Conclusión
-
+Muy bien, ahora para concluir, en este artículo hemos visto y aprendido sobre conceptos bastante interesantes e importantes para el desarrollo de nuestros videojuegos, tales como Tiles, TileMaps, TileSet, Collision Layer, Collision Mask e incluso a añadir el personaje de nuestro videojuego al mapa de la escena World. Además de que vimos también de una forma visual la mayoría de los procedimientos para tener una mayor claridad de lo que se explica en cada parte.
 
 ### Siguiente parte
 [Parte 5: Creando la escena Player de nuestro personaje parte 2](articulo_4_5_escena_player_parte_2.md)

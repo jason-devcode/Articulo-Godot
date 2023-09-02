@@ -3,8 +3,11 @@
 
 - [Moviendo a nuestro personaje](#moviendo-a-nuestro-personaje)
 - [Animando a nuestro personaje](#animando-a-nuestro-personaje)
-- [Agregando una hitbox a nuestro personaje]
-
+- [Agregando una hitbox a nuestro personaje](#agregando-una-hitbox-a-nuestro-personaje)
+- [Conclusión](#conclusión)
 
 ### Moviendo a nuestro personaje
 ### Animando a nuestro personaje
+### Agregando una hitbox a nuestro personaje
+### Conclusión
+### Siguiente Parte
