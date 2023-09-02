@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://nmd8ybgsqu1o"]
+
+[ext_resource type="Texture2D" uid="uid://6144soweexwn" path="res://resources/megabot assets files/Sprites/player.png" id="1_gl3is"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqgkq"]
+size = Vector2(18, 23)
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gl3is")
+hframes = 6
+vframes = 2
+frame = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 2.5)
+shape = SubResource("RectangleShape2D_hqgkq")
