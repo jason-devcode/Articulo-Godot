@@ -50,9 +50,11 @@ Lo primero que debemos hacer será crear un nodo de tipo Sprite2D al interior de
 ![right_click_scene_node_add_child](resources/right_click_scene_node_add_child.png)
 
 Y daremos click izquierdo en la opción que dice **Add Child Node** para desplegar nuevamente la ventana de selección del tipo de nodo a añadir:
+
 ![add_child_node_window](resources/add_child_node_window.png)
 
 Veremos que estará en la busqueda anterior que hicimos para el nodo CharacterBody2D, ahora daremos click izquierdo en el campo de texto debajo de **Search:** borramos y escribimos Sprite2D:
+
 ![search_sprite_2d_node_type](resources/search_sprite_2d_node_type.png)
 
 Y por último daremos click izquierdo en el botón **Create** para crear el nuevo nodo.
@@ -75,6 +77,7 @@ Desplegaremos la carpeta Sprites:
 ![folder_assets_sprites_project](resources/folder_assets_sprites_project.png)
 
 Podemos ver una imagen en formato .png llamada **player.png** que es la textura que utilizaremos para darle aspecto a nuestro personaje, para asignarla al nodo Sprite2D que habíamos creado lo haremos arrastrando la imagen al nodo Sprite2D así como se ve a continuación:
+
 ![drop_sprite_player](resources/drop_sprite_player.gif)
 
 
