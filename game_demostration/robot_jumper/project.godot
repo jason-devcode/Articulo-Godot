@@ -23,6 +23,7 @@ Utils="*res://scripts/Global/Utils.gd"
 
 [display]
 
+window/size/mode=2
 window/stretch/mode="canvas_items"
 
 [rendering]

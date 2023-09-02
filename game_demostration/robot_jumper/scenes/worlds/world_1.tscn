@@ -597,14 +597,6 @@ layer_0/tile_data = PackedInt32Array(1048584, 131073, 2, 1114120, 131073, 3, 117
 position = Vector2(711.25, 475)
 shape = SubResource("RectangleShape2D_lferl")
 
-[node name="player" parent="TileMap" instance=ExtResource("3_hmo4e")]
-position = Vector2(462, 273)
-
-[node name="Camera2D" type="Camera2D" parent="TileMap/player"]
-zoom = Vector2(2.5, 2.5)
-limit_left = 0
-position_smoothing_enabled = true
-
 [node name="Enemies" type="Node2D" parent="TileMap"]
 
 [node name="robot_enemy" parent="TileMap/Enemies" instance=ExtResource("6_qjrk8")]
@@ -621,6 +613,26 @@ position = Vector2(540, 53)
 
 [node name="robot_enemy5" parent="TileMap/Enemies" instance=ExtResource("6_qjrk8")]
 position = Vector2(878, 226)
+
+[node name="robot_enemy6" parent="TileMap/Enemies" instance=ExtResource("6_qjrk8")]
+position = Vector2(1111.82, 36.1786)
+
+[node name="robot_enemy7" parent="TileMap/Enemies" instance=ExtResource("6_qjrk8")]
+position = Vector2(748.124, -48.9289)
+
+[node name="robot_enemy8" parent="TileMap/Enemies" instance=ExtResource("6_qjrk8")]
+position = Vector2(172.666, 18.0029)
+
+[node name="robot_enemy9" parent="TileMap/Enemies" instance=ExtResource("6_qjrk8")]
+position = Vector2(1315.91, 120.13)
+
+[node name="player" parent="TileMap" instance=ExtResource("3_hmo4e")]
+position = Vector2(462, 273)
+
+[node name="Camera2D" type="Camera2D" parent="TileMap/player"]
+zoom = Vector2(2, 2)
+limit_left = 0
+position_smoothing_enabled = true
 
 [node name="background" parent="." instance=ExtResource("4_5egbo")]
 scroll_base_scale = Vector2(1.1, 1)

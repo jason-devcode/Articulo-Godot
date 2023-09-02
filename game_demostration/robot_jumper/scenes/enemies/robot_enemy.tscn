@@ -63,5 +63,6 @@ shape = SubResource("CircleShape2D_nkj0f")
 target_position = Vector2(-69, 0)
 collision_mask = 2
 
+[connection signal="area_entered" from="enemy_hitbox" to="." method="_on_enemy_hitbox_area_entered"]
 [connection signal="area_entered" from="DetectionZone" to="." method="_on_detection_zone_area_entered"]
 [connection signal="area_exited" from="DetectionZone" to="." method="_on_detection_zone_area_exited"]

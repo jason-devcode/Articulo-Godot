@@ -12,12 +12,13 @@ extends CharacterBody2D
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var animations: AnimationPlayer = $AnimationPlayer
 
-@onready var shotSpawnPoint: Vector2 = $shot_spawnpoint.position
+@onready var shotSpawnPoint: Marker2D = $shot_spawnpoint
 
-@onready var VoltBusterClass = preload("res://scenes/player/volt_buster.tscn")
+@onready var ShotClass = preload( "res://scenes/player/shot.tscn" )
 
 var isOnFloor : bool = false
 var flipSprite: bool = false
+var isPlayerShooting: bool = true
 
 var direction: Vector2 = Vector2(0,0)
 var currentPlayerAnimation: String = "idle_animation"
@@ -30,6 +31,10 @@ func _ready():
 func respawnPlayer():
 	position = spawnPoint
 
+func checkIsPlayerShootingAnimation():
+	if isPlayerShooting: 
+		currentPlayerAnimation += "_shooting"		
+
 func changePlayerAnimation( animationName: String = "idle_animation" ):
 	currentPlayerAnimation = animationName
 
@@ -41,14 +46,23 @@ func choseJumpAnimation():
 	
 func choseWalkAnimation():
 	changePlayerAnimation( "walk_animation" )
+	
+func choseShotAnimation():
+	changePlayerAnimation( "" )
+
 
 func getInputDirection():
 	direction = Input.get_vector( "ui_left", "ui_right", "ui_up", "ui_down" )
 	
 	if Input.is_key_pressed( KEY_SPACE ):
-		var shot = VoltBusterClass.instantiate()
-		shot.setInitPosition( shotSpawnPoint )
-
+		if !isPlayerShooting:
+			var shot = ShotClass.instantiate()
+			shot.setInitProps( position, shotSpawnPoint.position, flipSprite )
+			get_parent().add_child(shot)
+			isPlayerShooting = true
+	else:
+		isPlayerShooting = false
+		
 func checkInputDirection():
 	return direction.length() != 0.0
 
@@ -95,6 +109,7 @@ func updateAnimationByMovement():
 func updatePlayerAnimation():
 	updateHorizontalFlipSprite()
 	updateAnimationByMovement()
+	checkIsPlayerShootingAnimation()
 	playPlayerAnimation()
 
 func applyGravity():

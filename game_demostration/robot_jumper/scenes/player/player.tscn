@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ceutcjief513f"]
+[gd_scene load_steps=12 format=3 uid="uid://ceutcjief513f"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_o0kj7"]
 [ext_resource type="Texture2D" uid="uid://ba3sx0une1o3x" path="res://resources/megabot_assets_files/Sprites/player/player.png" id="2_2lthb"]
@@ -37,23 +37,6 @@ tracks/0/keys = {
 "values": [8]
 }
 
-[sub_resource type="Animation" id="Animation_ldxew"]
-resource_name = "idle_shot_animation"
-length = 0.2
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [9]
-}
-
 [sub_resource type="Animation" id="Animation_bkssq"]
 resource_name = "jump_animation"
 length = 0.2
@@ -88,13 +71,66 @@ tracks/0/keys = {
 "values": [8, 1, 2, 3, 0]
 }
 
+[sub_resource type="Animation" id="Animation_ldxew"]
+resource_name = "idle_animation_shooting"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+
+[sub_resource type="Animation" id="Animation_6le7y"]
+resource_name = "jump_animation_shooting"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+
+[sub_resource type="Animation" id="Animation_4xhw6"]
+resource_name = "walk_animation_shooting"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [7, 6, 5, 4]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3g1lc"]
 _data = {
 "RESET": SubResource("Animation_gnjij"),
 "idle_animation": SubResource("Animation_vuk12"),
-"idle_shot_animation": SubResource("Animation_ldxew"),
+"idle_animation_shooting": SubResource("Animation_ldxew"),
 "jump_animation": SubResource("Animation_bkssq"),
-"walk_animation": SubResource("Animation_x0xe3")
+"jump_animation_shooting": SubResource("Animation_6le7y"),
+"walk_animation": SubResource("Animation_x0xe3"),
+"walk_animation_shooting": SubResource("Animation_4xhw6")
 }
 
 [node name="player" type="CharacterBody2D"]
@@ -125,5 +161,7 @@ shape = SubResource("RectangleShape2D_kcbec")
 
 [node name="shot_spawnpoint" type="Marker2D" parent="."]
 position = Vector2(11, -1)
+
+[node name="Timer" type="Timer" parent="."]
 
 [connection signal="area_entered" from="hitbox_player" to="." method="_on_hitbox_area_entered"]

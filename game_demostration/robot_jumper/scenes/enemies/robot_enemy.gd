@@ -55,8 +55,12 @@ func _on_detection_zone_area_entered(area):
 func _on_detection_zone_area_exited(_area):
 	if _area.name == "hitbox_player":
 		isOutOfDetectZone = true
+		
 
-
+func _on_enemy_hitbox_area_entered(area):
+	if area.name == "shot_hitbox":
+		area.get_parent().explosion()
+		queue_free()
 
 
 
