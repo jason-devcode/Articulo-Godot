@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://ceutcjief513f"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_o0kj7"]
-[ext_resource type="Texture2D" uid="uid://ba3sx0une1o3x" path="res://resources/megabot_assets_files/Sprites/player/player.png" id="2_2lthb"]
+[ext_resource type="Texture2D" uid="uid://ba3sx0une1o3x" path="res://resources/megabot_assets_files/Sprites/player/player.png" id="2_8k5qk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kcbec"]
 size = Vector2(18, 23)
@@ -137,7 +137,7 @@ _data = {
 script = ExtResource("1_o0kj7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_2lthb")
+texture = ExtResource("2_8k5qk")
 hframes = 6
 vframes = 2
 frame = 8

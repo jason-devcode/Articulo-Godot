@@ -1,29 +1,29 @@
 [gd_scene load_steps=12 format=3 uid="uid://bui4gsxwejbo1"]
 
 [ext_resource type="Script" path="res://scenes/player/shot.gd" id="1_nlu5k"]
-[ext_resource type="Texture2D" uid="uid://cdepkfi5kxq7a" path="res://resources/megabot_assets_files/ase files/shot.png" id="1_rt426"]
-[ext_resource type="Texture2D" uid="uid://bwqyrrmxbqeyi" path="res://resources/megabot_assets_files/Sprites/explosion/explosion1.png" id="3_m1id1"]
-[ext_resource type="Texture2D" uid="uid://cdxkpioq1nbrc" path="res://resources/megabot_assets_files/Sprites/explosion/explosion2.png" id="4_xlbqh"]
-[ext_resource type="Texture2D" uid="uid://b5k22hdp23umh" path="res://resources/megabot_assets_files/Sprites/explosion/explosion3.png" id="5_i28b5"]
+[ext_resource type="Texture2D" uid="uid://cdepkfi5kxq7a" path="res://resources/megabot_assets_files/ase files/shot.png" id="2_8esbg"]
+[ext_resource type="Texture2D" uid="uid://bwqyrrmxbqeyi" path="res://resources/megabot_assets_files/Sprites/explosion/explosion1.png" id="3_sv52m"]
+[ext_resource type="Texture2D" uid="uid://cdxkpioq1nbrc" path="res://resources/megabot_assets_files/Sprites/explosion/explosion2.png" id="4_ee3w7"]
+[ext_resource type="Texture2D" uid="uid://b5k22hdp23umh" path="res://resources/megabot_assets_files/Sprites/explosion/explosion3.png" id="5_hmtyn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_csjv4"]
 radius = 6.0
 height = 14.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2cbwl"]
-atlas = ExtResource("1_rt426")
+atlas = ExtResource("2_8esbg")
 region = Rect2(0, 0, 8, 4)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bkbjt"]
-atlas = ExtResource("3_m1id1")
+atlas = ExtResource("3_sv52m")
 region = Rect2(0, 0, 22, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_30x0j"]
-atlas = ExtResource("4_xlbqh")
+atlas = ExtResource("4_ee3w7")
 region = Rect2(0, 0, 22, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_clg37"]
-atlas = ExtResource("5_i28b5")
+atlas = ExtResource("5_hmtyn")
 region = Rect2(0, 0, 22, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tjhil"]

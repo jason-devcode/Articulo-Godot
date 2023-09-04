@@ -1,15 +1,15 @@
 [gd_scene load_steps=9 format=3 uid="uid://bm176fdi6qih5"]
 
 [ext_resource type="Script" path="res://scenes/enemies/robot_enemy.gd" id="1_iwq74"]
-[ext_resource type="Texture2D" uid="uid://dq5g0ua57hlm5" path="res://resources/megabot_assets_files/Sprites/enemy/enemy2.png" id="2_qqwe3"]
-[ext_resource type="Texture2D" uid="uid://c45nn64ui2rw2" path="res://resources/megabot_assets_files/Sprites/enemy/enemy1.png" id="3_8s5ll"]
+[ext_resource type="Texture2D" uid="uid://dq5g0ua57hlm5" path="res://resources/megabot_assets_files/Sprites/enemy/enemy2.png" id="2_4hb68"]
+[ext_resource type="Texture2D" uid="uid://c45nn64ui2rw2" path="res://resources/megabot_assets_files/Sprites/enemy/enemy1.png" id="3_j33p5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t7oxt"]
-atlas = ExtResource("2_qqwe3")
+atlas = ExtResource("2_4hb68")
 region = Rect2(0, 0, 22, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_284yu"]
-atlas = ExtResource("3_8s5ll")
+atlas = ExtResource("3_j33p5")
 region = Rect2(0, 0, 22, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pri8b"]

@@ -4,18 +4,18 @@ extends CharacterBody2D
 # Código fuente del script para las mecánicas del jugador.
 #
 # Mecánicas implementadas en este código:
-# 1. Mecánica de moviemiento
+# 1. Mecánica de movimiento
 # 2. Mecánica de salto
 ######################################################################
+
+# Factor de gravedad
+@export var gravity: float = 20.0
 
 # Velocidad máxima del personaje
 @export var maxSpeed: float = 90.0
 
 # Máxima altura que se puede alcanzar en un salto
 @export var maxJumpHeight = 400.0
-
-# Factor de gravedad
-@export var gravity: float = 20.0
 
 # Variable para comprobar si el jugador está tocando el suelo
 var isOnFloor: bool = false
