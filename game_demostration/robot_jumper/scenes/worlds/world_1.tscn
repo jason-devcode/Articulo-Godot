@@ -1,9 +1,8 @@
-[gd_scene load_steps=32 format=3 uid="uid://dep1s66abmsu8"]
+[gd_scene load_steps=31 format=3 uid="uid://dep1s66abmsu8"]
 
 [ext_resource type="Script" path="res://scenes/worlds/world_1.gd" id="1_qfy52"]
 [ext_resource type="Texture2D" uid="uid://b5mqmutfae2qt" path="res://resources/megabot_assets_files/Environments/twilight area/tileset.png" id="2_l2sgy"]
 [ext_resource type="Texture2D" uid="uid://dkbuvhugvhgg4" path="res://resources/megabot_assets_files/Environments/Bay area/layers/tileset.png" id="3_cxqx6"]
-[ext_resource type="PackedScene" uid="uid://ceutcjief513f" path="res://scenes/player/player.tscn" id="3_hmo4e"]
 [ext_resource type="PackedScene" uid="uid://c3knnle6ty240" path="res://scenes/backgrounds/background.tscn" id="4_5egbo"]
 [ext_resource type="PackedScene" uid="uid://bm176fdi6qih5" path="res://scenes/enemies/robot_enemy.tscn" id="6_qjrk8"]
 [ext_resource type="AudioStream" uid="uid://hinedr8blfwo" path="res://resources/Mega Bot Music/Mega Bot Bay Music/Mega Bot Bay.mp3" id="7_we6g8"]
@@ -626,13 +625,8 @@ position = Vector2(172.666, 18.0029)
 [node name="robot_enemy9" parent="TileMap/Enemies" instance=ExtResource("6_qjrk8")]
 position = Vector2(1315.91, 120.13)
 
-[node name="player" parent="TileMap" instance=ExtResource("3_hmo4e")]
+[node name="PlayerSpawnPoint" type="Marker2D" parent="TileMap"]
 position = Vector2(462, 273)
-
-[node name="Camera2D" type="Camera2D" parent="TileMap/player"]
-zoom = Vector2(2, 2)
-limit_left = 0
-position_smoothing_enabled = true
 
 [node name="background" parent="." instance=ExtResource("4_5egbo")]
 scroll_base_scale = Vector2(1.1, 1)

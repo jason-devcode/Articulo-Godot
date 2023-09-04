@@ -1,3 +1,4 @@
+Marker2D
 AnimatedSprite2D
 AnimationPlayer
 Node2D
@@ -11,7 +12,6 @@ AudioStreamPlayer
 AudioListener2D
 AudioStreamPlayer2D
 StaticBody2D
-Marker2D
 ColorRect
 SpotLight3D
 DirectionalLight2D

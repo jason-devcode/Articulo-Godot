@@ -28,6 +28,9 @@ var spawnPoint: Vector2
 func _ready():
 	spawnPoint = position
 
+func setPlayerSpawnPoint( point: Vector2 ):
+	spawnPoint = point
+
 func respawnPlayer():
 	position = spawnPoint
 
