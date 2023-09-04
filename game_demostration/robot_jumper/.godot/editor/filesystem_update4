@@ -1,5 +1,2 @@
 res://scenes/player/player.tscn
-res://scenes/enemies/robot_enemy.tscn
-res://scenes/worlds/world_1.tscn
-res://scenes/worlds/world_base.tscn
-res://scenes/player/shot.tscn
+res://scenes/player/player.gd

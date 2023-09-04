@@ -1,6 +1,8 @@
 # Godot Engine 4: Crea tú primer videojuego con Godot Engine 4 desdé cero
 ## Parte 4: Creando la escena world
 
+![article_4_4_header](resources/article_4_4_header.png)
+
 - [Introducción](#introducción)
 - [Creando la escena world](#creando-la-escena-world)
 - [Creando y diseñando el mapa](#creando-y-diseñando-el-mapa)
@@ -48,7 +50,7 @@ Para profundizar más sobré los tilemaps y tilesets en godot recomiendo leer la
 ### Creando el TileMap de nuestro mapa
 Teniendo ya una idea básica de lo que son tilemaps y tilesets, podemos proceder a crear el nodo de tipo TileMap en el cual vamos a añadir los TileSets con los diseños de los tiles para diseñar nuestro mapa, y también cómo podemos añadirle colisiones a nuestros tiles.
 
-Primero vamos a crear un nodo de TileMap, el proceso será el mismo que hemos seguido para la creación de nodos en la [primera parte de la creación de la escena Player](articulo_4_3_escena_player_parte_1.md).
+Primero vamos a crear un nodo de TileMap, el proceso será el mismo que hemos seguido para la creación de nodos en la [parte de la creación de la escena Player](articulo_4_3_escena_player.md).
 
 1. Damos click derecho sobre el nodo Node2D.
 2. Damos click izquierdo en la opción **Add Child Node**
@@ -91,7 +93,7 @@ Ahora arrastraremos esa imagen al panel de edición de TileSet que nos aparecio 
 
 Antes de comenzar a diseñar el mapa, vamos a añadirle las colisiones de los tiles con los que el jugador chocará en la escena.
 
-Primero, debemos crear una capa de física**Physics Layer** a nuestro TileSet, esto se hace para que internamente el TileMap guarde la información de las colisiones de los tiles que conforman su diseño.
+Primero, debemos crear una capa de física **Physics Layer** a nuestro TileSet, esto se hace para que internamente el TileMap guarde la información de las colisiones de los tiles que conforman su diseño.
 
 Para crear el **Physics Layer**, en el panel Inspector para editar las propiedades de los nodos, vamos a buscar otra vez la propiedad Tile Set del nodo TileMap:
 
@@ -113,7 +115,7 @@ Podemos observar una tabla númerica **Collision Layer**, y otra **Collision Mas
 
 Las tablas de valores Collision Mask y Collision Layer son la forma en cómo podemos definir por ejemplo como un objecto interactua con las colisiones de otros objetos y a su vez como otros objetos interactuan con la colisión de este objeto, los números de las tablas de valores que vimos anteriormente son los que nos ayudan a indicar como funcionará esa interacción.
 
- Para entender que son las tablas de valores de **Collision Layer** y **Collision Mask** debemos saber que las colisiones de los objetos en Godot funcionan mediante un sistema de capas de colisiones, donde la colisión de un objeto puede encontrarse en una capa u otra e incluso en varias capas al mismo tiempo, sabiendo eso entonces para conocer o definir en que capas se encuentra la colisión de un objeto, lo hacemos mediante los valores de la tabla **Collision Layer** donde cada valor índica una capa diferente, mientras que los valores de la tabla **Collision Mask** indican con que capas de colisiones puede interactuar la colisión de un objeto.
+ Para entender que son las tablas de valores de **Collision Layer** y **Collision Mask**, debemos saber que las colisiones de los objetos en Godot funcionan mediante un sistema de capas de colisiones, donde la colisión de un objeto puede encontrarse en una capa u otra e incluso en varias capas al mismo tiempo; sabiendo eso entonces para conocer o definir en que capas se encuentra la colisión de un objeto, lo hacemos mediante los valores de la tabla **Collision Layer** donde cada valor índica una capa diferente, mientras que los valores de la tabla **Collision Mask** indican con que capas de colisiones puede interactuar la colisión de un objeto.
 
 ### Añadiendo colisiones a los tiles
 
@@ -133,31 +135,35 @@ Lo siguiente será comenzar a seleccionar uno a uno los tiles del tileset a los 
 
 ![selecting_tiles](resources/selecting_tiles.gif)
 
-Una vez hemos seleccionado los tiles a los que vamos a agregarle las colisiones daremos click izquierdo en la opción **Physics** que noes desplegará el siguiente submenu:
+Una vez hemos seleccionado los tiles a los que vamos a agregarle las colisiones daremos click izquierdo en la opción **Physics** que nos desplegará el siguiente submenu:
 
 ![click_physics](resources/click_physics.png)
 
-Luego daremos click en **Physics Layer 0** y presionaremos la tecla **f** en el teclado, eso hará que se genere una forma de colisión rectangular para cada uno de los tiles que seleccionamos muy bien ahora los tiles de nuestro TileSet tienen colisiones lo que significa que el personaje y los enemigos de nuestro videojuego van a poder chocar e interactuar con ellos.
+Luego daremos click izquierdo en **Physics Layer 0** y presionaremos la tecla **f**, eso hará que se genere una forma de colisión rectangular para cada uno de los tiles que seleccionamos.
+
+Muy bien ahora los tiles de nuestro TileSet tienen colisiones lo que significa que el personaje y los enemigos de nuestro videojuego van a poder chocar e interactuar con ellos.
 
 ### Diseñando el mapa
 
-Ahora que ya hemos creado el nodo TileMap, creado el TileSet, y agregado colisiones a los tiles que vamos a utilizar, podemos comenzar a el TileMap de nuestro mapa.
+Ahora que ya hemos creado el nodo TileMap, creado el TileSet, y agregado colisiones a los tiles que vamos a utilizar, podemos comenzar a diseñar el TileMap de nuestro mapa.
 
 Para eso vamos a seleccionar el nodo TileMap y vamos a abrir el editor de TileMaps que lo podemos encontrar enseguida del editor de TileSet:
 
 ![tilemap_editor](resources/tilemap_editor.png)
 
-Lo que harémos ahora será dar click izquierdo en alguno de los tiles que queremos seleccionar para comenzar a diseñar nuestro nivel, una vez seleccionado lo que haremos será posicionarnos en el viewport para comenzar a colocar los tiles, para colocarlos sólo hacemos click izquierdo en la parte donde queremos comenzar a diseñar el mapa:
+Lo que harémos ahora será dar click izquierdo en alguno de los tiles que queremos seleccionar para comenzar a diseñar nuestro nivel.
+
+Una vez seleccionado lo que haremos será posicionarnos en el viewport para comenzar a colocar los tiles, para colocarlos sólo hacemos click izquierdo en la parte donde queremos comenzar a diseñar el mapa:
 
 ![map_design](resources/map_design.gif)
 
-Recomiendo que a la hora de diseñar su mapa trabajen en la zona rectangular en el interior del rectángulo azul ya que es la zona visible a nuestra pantalla y podremos darnos una idea de las dimensiones de nuestro mapa.
+Recomiendo que a la hora de diseñar el mapa, trabajar en la zona enmarcada por el rectángulo azul que podemos observar en el viewport, ya que esa es la zona visible a nuestra pantalla y mediante ella podemos darnos una idea de las dimensiones de nuestro mapa.
 
 Ahora que sabemos colocar tiles en nuestro TileMap para diseñar el mapa, podremos seguir añadiendo los detalles que queramos:
 
 ![tilemap_design](resources/tilemap_design.png)
 
-Antes de continuar, vamos a guardar la escena world, en la carpeta scenes que creamos para guardar en una carpeta player la escena player de neustro personaje, vamos a crear una carpeta world y ahí guardaremos la escena con el nombre world.tscn:
+Antes de continuar, vamos a guardar la escena world, en la carpeta scenes que creamos para guardar en una carpeta player la escena player de nuestro personaje, vamos a crear una carpeta world y ahí guardaremos la escena con el nombre world.tscn:
 
 ![save_world_scene](resources/save_world_scene.png)
 
@@ -177,6 +183,8 @@ Ahora lo que vamos a hacer será similar a lo que hicimos cuándo le colocamos e
 ### Añadiendo una cámara 2D
 
 Después de agregar a nuestro personaje a la escena, necesitaremos añadir también otro elemento muy importante, la cámara, con la cámara podremos visualizar de forma constante una región del mapa dependiendo de en donde se situe la cámara y el tamaño de su área de visualización. 
+
+
 Para que una cámara pueda seguir a nuestro personaje lo que tendremos que hacer será crear un nodo de tipo Camera2D y anidar ese nodo en el de la escena de nuestro personaje, de ese modo la cámara tomará como posición o marco de referencia la posición de nuestro personaje en el mapa y se moverá cuándo se mueva el personaje:
 
 ![add_camera_to_world](resources/add_camera_to_world.gif)
@@ -194,4 +202,4 @@ Luego de posicionar y ajustar el fondo, lo que debemos hacer será posicionar ta
 Muy bien, ahora para concluir, en este artículo hemos visto y aprendido sobre conceptos bastante interesantes e importantes para el desarrollo de nuestros videojuegos, tales como Tiles, TileMaps, TileSet, Collision Layer, Collision Mask e incluso a añadir el personaje de nuestro videojuego al mapa de la escena World. Además de que vimos también de una forma visual la mayoría de los procedimientos para tener una mayor claridad de lo que se explica en cada parte.
 
 ### Siguiente parte
-[Parte 5: Creando la escena Player de nuestro personaje parte 2](articulo_4_5_escena_player_parte_2.md)
+[Parte 5: Agregando mecánicas a nuestro personaje](articulo_4_5_agregando_mecanicas_player.md)

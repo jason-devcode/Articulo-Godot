@@ -33,7 +33,7 @@ func updateSpriteFlip():
 func updateEnemyAnimation():
 	updateSpriteFlip()
 
-func onChosePlayer():
+func onChosedPlayer():
 	#if !isOutOfDetectZone or enemyIsLookingPlayer:
 	if !isOutOfDetectZone:
 		setEnemyPlayerTarget()
@@ -42,7 +42,7 @@ func onChosePlayer():
 			moveEnemyToPlayer()
 
 func _physics_process(_delta):
-	onChosePlayer()
+	onChosedPlayer()
 	applyFriction()	
 	updateEnemyAnimation()
 	move_and_slide()

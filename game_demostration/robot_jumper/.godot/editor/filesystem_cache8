@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1693632477
+::res://::1693801203
 background.gd::GDScript::-1::1693519419::0::1::::<>ParallaxBackground<>::
 icon.svg::CompressedTexture2D::6594237791638244834::1693519419::1693528655::1::::<><>::
 player.gd::GDScript::-1::1693519419::0::1::::<>CharacterBody2D<>::
@@ -59,9 +59,9 @@ player.png::CompressedTexture2D::2445358584513270583::1693519419::1693528655::1:
 ::res://scenes/::1693519419
 ::res://scenes/backgrounds/::1693519419
 background.tscn::PackedScene::6759585888389367599::1693519419::0::1::::<><>::res://background.gd<>uid://bsgbcw7ab5t3l
-::res://scenes/enemies/::1693632056
-robot_enemy.gd::GDScript::-1::1693607421::0::1::::<>CharacterBody2D<>::
-robot_enemy.tscn::PackedScene::3284359199991334620::1693632056::0::1::::<><>::res://scenes/enemies/robot_enemy.gd<>uid://dq5g0ua57hlm5::::res://resources/megabot_assets_files/Sprites/enemy/enemy2.png<>uid://c45nn64ui2rw2::::res://resources/megabot_assets_files/Sprites/enemy/enemy1.png
+::res://scenes/enemies/::1693759337
+robot_enemy.gd::GDScript::-1::1693758947::0::1::::<>CharacterBody2D<>::
+robot_enemy.tscn::PackedScene::3284359199991334620::1693759337::0::1::::<><>::res://scenes/enemies/robot_enemy.gd<>uid://dq5g0ua57hlm5::::res://resources/megabot_assets_files/Sprites/enemy/enemy2.png<>uid://c45nn64ui2rw2::::res://resources/megabot_assets_files/Sprites/enemy/enemy1.png
 ::res://scenes/gui/::1693604103
 base_button.tscn::PackedScene::7885637415900536694::1693519419::0::1::::<><>::
 base_menu.tscn::PackedScene::5358580719105991118::1693519419::0::1::::<><>::uid://dkl4kcliko03k
@@ -69,15 +69,15 @@ lifes_container.tscn::PackedScene::3264041635877004946::1693519419::0::1::::<><>
 menu.gd::GDScript::-1::1693552057::0::1::::<>Control<>::
 menu.tscn::PackedScene::5215251139820964705::1693604103::0::1::::<><>::res://scenes/gui/menu.gd<>uid://dkl4kcliko03k
 ui.tscn::PackedScene::7121099917149294005::1693519419::0::1::::<><>::
-::res://scenes/player/::1693632056
+::res://scenes/player/::1693759337
 player.gd::GDScript::-1::1693605430::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::5096041976728119909::1693632056::0::1::::<><>::res://scenes/player/player.gd<>uid://ba3sx0une1o3x::::res://resources/megabot_assets_files/Sprites/player/player.png
+player.tscn::PackedScene::5096041976728119909::1693759337::0::1::::<><>::res://scenes/player/player.gd<>uid://ba3sx0une1o3x::::res://resources/megabot_assets_files/Sprites/player/player.png
 shot.gd::GDScript::-1::1693607272::0::1::::<>Node2D<>::
-shot.tscn::PackedScene::3808485067995968002::1693632056::0::1::::<><>::res://scenes/player/shot.gd<>uid://cdepkfi5kxq7a::::res://resources/megabot_assets_files/ase files/shot.png<>uid://bwqyrrmxbqeyi::::res://resources/megabot_assets_files/Sprites/explosion/explosion1.png<>uid://cdxkpioq1nbrc::::res://resources/megabot_assets_files/Sprites/explosion/explosion2.png<>uid://b5k22hdp23umh::::res://resources/megabot_assets_files/Sprites/explosion/explosion3.png
-::res://scenes/worlds/::1693632056
+shot.tscn::PackedScene::3808485067995968002::1693759337::0::1::::<><>::res://scenes/player/shot.gd<>uid://cdepkfi5kxq7a::::res://resources/megabot_assets_files/ase files/shot.png<>uid://bwqyrrmxbqeyi::::res://resources/megabot_assets_files/Sprites/explosion/explosion1.png<>uid://cdxkpioq1nbrc::::res://resources/megabot_assets_files/Sprites/explosion/explosion2.png<>uid://b5k22hdp23umh::::res://resources/megabot_assets_files/Sprites/explosion/explosion3.png
+::res://scenes/worlds/::1693759337
 world_1.gd::GDScript::-1::1693552215::0::1::::<>Node2D<>::
-world_1.tscn::PackedScene::7472595554159166401::1693632056::0::1::::<><>::res://scenes/worlds/world_1.gd<>uid://b5mqmutfae2qt::::res://resources/megabot_assets_files/Environments/twilight area/tileset.png<>uid://dkbuvhugvhgg4::::res://resources/megabot_assets_files/Environments/Bay area/layers/tileset.png<>uid://ceutcjief513f::::res://scenes/player/player.tscn<>uid://c3knnle6ty240::::res://scenes/backgrounds/background.tscn<>uid://bm176fdi6qih5::::res://scenes/enemies/robot_enemy.tscn<>uid://hinedr8blfwo::::res://resources/Mega Bot Music/Mega Bot Bay Music/Mega Bot Bay.mp3
-world_base.tscn::PackedScene::7472595554159166401::1693632056::0::1::::<><>::uid://ceutcjief513f::::res://scenes/player/player.tscn
+world_1.tscn::PackedScene::7472595554159166401::1693759337::0::1::::<><>::res://scenes/worlds/world_1.gd<>uid://b5mqmutfae2qt::::res://resources/megabot_assets_files/Environments/twilight area/tileset.png<>uid://dkbuvhugvhgg4::::res://resources/megabot_assets_files/Environments/Bay area/layers/tileset.png<>uid://ceutcjief513f::::res://scenes/player/player.tscn<>uid://c3knnle6ty240::::res://scenes/backgrounds/background.tscn<>uid://bm176fdi6qih5::::res://scenes/enemies/robot_enemy.tscn<>uid://hinedr8blfwo::::res://resources/Mega Bot Music/Mega Bot Bay Music/Mega Bot Bay.mp3
+world_base.tscn::PackedScene::7472595554159166401::1693759337::0::1::::<><>::uid://ceutcjief513f::::res://scenes/player/player.tscn
 ::res://scripts/::1693519419
 ::res://scripts/Global/::1693519419
 Game.gd::GDScript::-1::1693519419::0::1::::<>Node<>::

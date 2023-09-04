@@ -13,7 +13,7 @@
 
 ## Introducción
 Hoy en esté árticulo verémos cómo podemos crear nuestros propios videojuegos
-desdé cero utilizando el motor de videojuegos Godot Engine, aprenderemos los conceptos
+desdé cero utilizando el [motor de videojuegos](https://es.wikipedia.org/wiki/Motor_de_videojuego) Godot Engine, aprenderemos los conceptos
 fundamentales para la creación de videojuegos en Godot Engine 4 y cómo podemos exportarlos a diferentes plataformas.
 **¡Comenzemos!**
 

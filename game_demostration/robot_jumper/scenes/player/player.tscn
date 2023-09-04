@@ -154,6 +154,7 @@ libraries = {
 }
 
 [node name="hitbox_player" type="Area2D" parent="."]
+collision_layer = 513
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox_player"]
 position = Vector2(-1, 2.5)

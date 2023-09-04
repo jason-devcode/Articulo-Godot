@@ -1,5 +1,5 @@
 # Godot Engine 4: Crea tú primer videojuego con Godot Engine 4 desdé cero
-## Parte 3: Creando la escena Player de nuestro personaje parte 1
+## Parte 3: Creando la escena Player de nuestro personaje
 
 ![scene_player](resources/scene_player_structure_scene.png)
 

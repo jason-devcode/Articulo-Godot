@@ -46,10 +46,6 @@ func choseJumpAnimation():
 	
 func choseWalkAnimation():
 	changePlayerAnimation( "walk_animation" )
-	
-func choseShotAnimation():
-	changePlayerAnimation( "" )
-
 
 func getInputDirection():
 	direction = Input.get_vector( "ui_left", "ui_right", "ui_up", "ui_down" )
