@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var menuAudioTheme: AudioStreamPlayer = $AudioStreamPlayer
 
-@onready var playerSpawnPoint: Vector2 = $PlayerSpawnPoint.position
+@onready var playerSpawnPoint: Vector2 = $TileMap/PlayerSpawnPoint.position
 
 @onready var PlayerClass = preload("res://scenes/player/player.tscn")
 
@@ -12,6 +12,7 @@ func _ready():
 	var player = PlayerClass.instantiate()
 	var camera = Camera2D.new()
 	camera.zoom = Vector2( 2 , 2 )
+	camera.limit_left = 0
 
 	tilemap.add_child( player )		
 	player.setPlayerSpawnPoint( playerSpawnPoint )
