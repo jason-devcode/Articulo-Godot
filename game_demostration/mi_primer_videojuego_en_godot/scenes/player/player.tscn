@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://nmd8ybgsqu1o"]
+[gd_scene load_steps=7 format=3 uid="uid://nmd8ybgsqu1o"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_044j2"]
 [ext_resource type="Texture2D" uid="uid://6144soweexwn" path="res://resources/megabot assets files/Sprites/player.png" id="1_gl3is"]
@@ -8,9 +8,39 @@ size = Vector2(18, 23)
 
 [sub_resource type="Animation" id="Animation_tvm6n"]
 resource_name = "walk_animation"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_t36we"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_r7vmm"]
 _data = {
+"RESET": SubResource("Animation_t36we"),
 "walk_animation": SubResource("Animation_tvm6n")
 }
 
@@ -21,7 +51,6 @@ script = ExtResource("1_044j2")
 texture = ExtResource("1_gl3is")
 hframes = 6
 vframes = 2
-frame = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 2.5)
