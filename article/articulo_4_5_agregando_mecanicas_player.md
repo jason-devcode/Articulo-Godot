@@ -2,7 +2,8 @@
 ## Parte 5: Agregando mecánicas a nuestro personaje
 
 - [Introducción](#introducción)
-- [Asignando un script a nuestro personaje](#Asignando-un-script-a-nuestro-personaje)
+- [Agregando las mécanicas a nuestro personaje](#agregando-las-mécanicas-a-nuestro-personaje)
+- [Creando y asignando un script a nuestro personaje](#creando-y-asignando-un-script-a-nuestro-personaje)
 - [Script de la lógica programada de las mecánicas de movimiento y salto](#script-de-la-lógica-programada-de-las-mecánicas-de-movimiento-y-salto)
 - [Probando el funcionamiento del script](#probando-el-funcionamiento-del-script)
 - [Animando a nuestro personaje - Animación de caminar](#animando-a-nuestro-personaje---animación-de-caminar)
@@ -13,9 +14,12 @@
 - [Conclusión](#conclusión)
 
 ### Introducción
-Ahora que ya hemos creado y diseñado el mapa de la escena mundo de nuestro videojuego y tenemos a nuestro personaje posicionado en el mapa, vamos a añadir las mecánicas de nuestro personaje, la mécanica del movimiento con las teclas, mecánica de salto y una hitbox para que nuestro personaje pueda detectar cuando colisiona con un enemigo.
+Ahora que ya hemos creado y diseñado el mapa de la escena World y hemos posicionado al personaje en el mapa, vamos a añadir las mecánicas las mécanicas de movimiento de nuestro personaje incluyendo las animaciones que debe realizar el personaje en cada mécanica, y también se agregará y programará una hitbox para que nuestro personaje pueda detectar las colisiones con los enemigos.
 
-### Asignando un script a nuestro personaje
+### Agregando las mécanicas a nuestro personaje
+Para agregar las mécancicas a nuestro personaje, vamos a necesitar programar la lógica de cada mecánica en un script GDScript que le asignaremos a nuestro personaje para poder manejar los eventos del teclado y realizar las acciones de las mecánicas de acuerdo a esos eventos del teclado.
+
+### Creando y asignando un script a nuestro personaje
 
 Primero vamos a asignar el script el cual contendrá la lógica programada en **GDScript** de las mecánicas de nuestro personaje, para eso debemos abrir la escena player de nuestro personaje:
 
