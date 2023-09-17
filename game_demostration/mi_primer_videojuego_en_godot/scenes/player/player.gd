@@ -1,11 +1,13 @@
 extends CharacterBody2D
 
 #######################################################################
-# Código fuente del script para las mecánicas del jugador.
+# Código fuente del script para manejar las mecánicas y estados del jugador.
 #
 # Mecánicas implementadas en este código:
 # 1. Mecánica de movimiento
 # 2. Mecánica de salto
+# 3. Actualización y reproducción de las animaciones
+# de acuerdo al estado del jugador en un momento determinado.
 ######################################################################
 
 # Factor de gravedad
@@ -17,11 +19,27 @@ extends CharacterBody2D
 # Máxima altura que se puede alcanzar en un salto
 @export var maxJumpHeight = 400.0
 
+# Animación actual del personaje
+@export var currentPlayerAnimation: String = "idle_animation"
+
 # Variable para comprobar si el jugador está tocando el suelo
 var isOnFloor: bool = false
 
+# Variable para comprobar si el jugador se está moviendo
+var playerIsMoving: bool = false
+
+# Variable para comprobar la dirección del jugador y saber si se
+# debe voltear horizontalmente la animación
+var flip_horizontal_animation: bool = false
+
 # Dirección del personaje
 var direction: Vector2 = Vector2(0,0)
+
+# Nodo del sprite del personaje
+@onready var sprite: Sprite2D = $Sprite2D
+
+# Nodo de animaciones del personaje
+@onready var animations: AnimationPlayer = $AnimationPlayer
 
 # Función para actualizar la dirección de avance del personaje en relación a las teclas
 # que se hayan presionado.
@@ -31,6 +49,8 @@ func updatePlayerDirectionByInput():
 # Función para manejar los eventos de entrada del teclado
 func handleInputEvents():
 	updatePlayerDirectionByInput()
+	if Input.is_key_pressed(KEY_ESCAPE):
+		get_tree().quit()
 
 # Actualiza las variables que indican en que estado se encuentra el personaje
 func updatePlayerState():
@@ -64,10 +84,58 @@ func updatePlayerPhysics():
 	if !isOnFloor:
 		applyGravity()
 
+# Función para comprobar si el jugador se está moviendo
+func checkPlayerIsMoving():
+	return velocity.length() != 0.0 or !isOnFloor
+	
+# Función para parar la animación del personaje
+func stopPlayerAnimation():
+	animations.stop()
+
+# Función para reproducir la animación actual del personaje
+func playPlayerAnimation():
+	animations.play(currentPlayerAnimation)
+
+# Función para comprobar si la velocidad horizontal del
+# jugador es diferente de cero.
+func checkPlayerHorizontalVelocity():
+	return velocity.x != 0.0
+
+# Función para comprobar la dirección horizontal del jugador
+func checkPlayerHorizontalDirection():
+	if checkPlayerHorizontalVelocity():
+		sprite.flip_h = velocity.x < 0.0
+
+# Función para establecer la animación actual del jugador
+func setPlayerCurrentAnimation( animationName: String = "idle" ):
+	currentPlayerAnimation = animationName + "_animation"
+
+# Función para comprobar y seleccionar la animación actual 
+# del personaje en relación a su movimiento
+func checkCurrentPlayerAnimation():
+	if !checkPlayerIsMoving():
+		setPlayerCurrentAnimation()
+		return
+	
+	checkPlayerHorizontalDirection()
+	
+	if isOnFloor and checkPlayerHorizontalVelocity():
+		setPlayerCurrentAnimation("walk")
+		return
+	
+	setPlayerCurrentAnimation("jump")
+	
+
+# Función para actualizar las animaciones del personaje
+func updatePlayerAnimations():
+	checkCurrentPlayerAnimation()
+	playPlayerAnimation()
+
 # Función que se encarga del proceso físico del personaje
 func _physics_process(_delta):
 	handleInputEvents()
 	updatePlayerState()
 	updatePlayerVelocity()
+	updatePlayerAnimations()
 	updatePlayerPhysics()
 	move_and_slide()

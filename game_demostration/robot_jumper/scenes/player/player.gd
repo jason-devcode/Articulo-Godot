@@ -71,11 +71,13 @@ func onJumpEvent():
 		choseJumpAnimation()
 
 func handleDirectionEvents():
-	if direction.length() != 0.0:
-		if direction.x != 0.0:
-			flipSprite = direction.x < 0.0
-		if direction.y < 0.0:
-			onJumpEvent()
+	if direction.length() == 0.0:
+		return
+		
+	if direction.x != 0.0:
+		flipSprite = direction.x < 0.0
+	if direction.y < 0.0:
+		onJumpEvent()
 
 func handleInput():
 	getInputDirection()

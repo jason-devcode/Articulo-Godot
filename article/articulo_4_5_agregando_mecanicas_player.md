@@ -2,22 +2,25 @@
 ## Parte 5: Agregando mecánicas a nuestro personaje
 
 - [Introducción](#introducción)
-- [Agregando las mécanicas a nuestro personaje](#agregando-las-mécanicas-a-nuestro-personaje)
+- [Agregando las mecánicas a nuestro personaje](#agregando-las-mecánicas-a-nuestro-personaje)
 - [Creando y asignando un script a nuestro personaje](#creando-y-asignando-un-script-a-nuestro-personaje)
 - [Script de la lógica programada de las mecánicas de movimiento y salto](#script-de-la-lógica-programada-de-las-mecánicas-de-movimiento-y-salto)
 - [Probando el funcionamiento del script](#probando-el-funcionamiento-del-script)
-- [Animando a nuestro personaje - Animación de caminar](#animando-a-nuestro-personaje---animación-de-caminar)
+- [Animando a nuestro personaje](#animando-a-nuestro-personaje)
+- [Agregando la animación de caminar](#agregando-la-animación-de-caminar)
 - [Agregando los keyframes de la animación de caminar](#agregando-los-keyframes-de-la-animación-de-caminar)
+- [Programando las animaciones - Script Completo](#programando-las-animaciones---script-completo)
+
+
 - [Agregando una hitbox a nuestro personaje](#agregando-una-hitbox-a-nuestro-personaje)
 - [Respondiendo a señales](#respondiendo-a-señales)
-- [Script completo](#script-completo)
 - [Conclusión](#conclusión)
 
 ### Introducción
-Ahora que ya hemos creado y diseñado el mapa de la escena World y hemos posicionado al personaje en el mapa, vamos a añadir las mecánicas las mécanicas de movimiento de nuestro personaje incluyendo las animaciones que debe realizar el personaje en cada mécanica, y también se agregará y programará una hitbox para que nuestro personaje pueda detectar las colisiones con los enemigos.
+En el [artículo anterior](articulo_4_4_escena_mundo.md) habíamos creado y diseñado el mapa de la escena World y también posicionado al personaje en el mapa, ahora en este artículo vamos a añadir las mecánicas de movimiento de nuestro personaje incluyendo las animaciones del personaje, agregaremos también una hitbox o área de colisión y la programaremos para que nuestro personaje pueda detectar las colisiones con los enemigos.
 
-### Agregando las mécanicas a nuestro personaje
-Para agregar las mécancicas a nuestro personaje, vamos a necesitar programar la lógica de cada mecánica en un script GDScript que le asignaremos a nuestro personaje para poder manejar los eventos del teclado y realizar las acciones de las mecánicas de acuerdo a esos eventos del teclado.
+### Agregando las mecánicas a nuestro personaje
+Para agregar las mécancicas a nuestro personaje, vamos a necesitar programar la lógica de cada mecánica en un script GDScript que le asignaremos a nuestro personaje para poder manejar los eventos del teclado y realizar las acciones correspondientes a esas mecánicas de acuerdo a esos eventos del teclado.
 
 ### Creando y asignando un script a nuestro personaje
 
@@ -25,7 +28,7 @@ Primero vamos a asignar el script el cual contendrá la lógica programada en **
 
 ![select_player_scene_for_add_script](resources/select_player_scene_for_add_script.png)
 
-Una vez hemos abierto la escena player de nuestro personaje, vamos a asignarle un script, para eso nos iremos al panel de edición de escenas **Scene**, buscaremos en la lista de nodos que hemos creado en la escena Player de nuestro personaje el nodo Player o CharacterBody2D si no le hemos cambiado el nombre, daremos click derecho sobre ese nodo y en el menú que nos desplega vamos a buscar la opción **Attach Script**:
+Una vez hemos abierto la escena player de nuestro personaje, vamos a asignarle un script, para hacer eso, en el panel de edición de escenas **Scene**, buscaremos en la lista de nodos de la escena Player, el nodo Player o CharacterBody2D si no le hemos cambiado el nombre al nodo, daremos click derecho sobre ese nodo y en el menú de opciones que nos despliega vamos a buscar la opción **Attach Script**:
 
 ![attach_script_player_scene](resources/attach_script_player_scene.png)
 
@@ -33,11 +36,11 @@ Daremos click izquierdo sobre esa opción y nos aparecerá una ventana como la s
 
 ![attach_script_popup_window](resources/attach_script_popup_window.png)
 
-Dejaremos todo como está y simplemente daremos click izquierdo sobre el botón **Create** y nos debería aparecer el editor de scripts de la siguiente manera:
+Dejaremos todo como está y simplemente daremos click izquierdo sobre el botón **Create**; luego de eso nos debería cambiar el editor al editor de scripts:
 
 ![script_editor_after_click_create_button](resources/script_editor_after_click_create_button.png)
 
-Nos aparecerá el código fuente de un script con la lógica programada en GDScript de algunas mecánicas, como mover al personaje mediante el teclado y saltar, sin embargo en el script que programaremos no vamos a utilizar ese mismo código, en su lugar usaremos el que he programado para este artículo, así que vamos a borrar todo ese código, simplemente presionando las teclas ctrl+A seguido de la tecla de borrar o retroceso.
+Por defecto al asignar un script a un nodo de tipo CharacterBody 2D nos va a generar el código fuente de un script con algunos ejemplos de las mecánicas que podemos programar para ese tipo de nodos, por ejemplo la lógica de la mecánica para mover al personaje mediante el teclado o la mecánica de saltar, sin embargo en el script que programaremos en este artículo no vamos a utilizar ese mismo código, en su lugar usaremos el que he programado para este artículo, así que vamos a reemplazar ese código que nos genero por defecto, simplemente presionando las teclas ctrl+A seguido de la tecla de borrar o retroceso.
 
 ### Script de la lógica programada de las mecánicas de movimiento y salto
 
@@ -121,51 +124,60 @@ func _physics_process(_delta):
 
 ```
 
-En este artículo no se explicará a detalle cada parte de este código, sin embargo he tratado de documentar con comentarios dando una descriptción simple de lo que hace cada función y variable del código.
+En este código fuente he tratado que sea lo más descriptivo posible, además de que he agregado comentarios que describen de forma simple lo que hace cada función y variable. En este artículo no se explicará sobre como programar scripts en Godot con GDScript, para aprender sobre GDScript recomiendo leer la [documentación oficial de GDScript](https://docs.godotengine.org/es/stable/tutorials/scripting/gdscript/gdscript_basics.html).
 
 ### Probando el funcionamiento del script
 
-Una vez hemos copiado ese código fuente a nuestro script, lo siguiente que haremos será probar su funcionamiento, para eso primero debemos guardar los cambios en nuestro script presionando las teclas ctrl+s, luego nos iremos a la parte superior derecha del editor y encontraremos la siguiente barra de botones:
+Una vez hemos agregado ese código fuente a nuestro script y guardarlo presionando las teclas ctrl+s, lo siguiente que haremos será probar su funcionamiento, para eso, nos fijaremos en la parte superior derecha del editor donde encontraremos la siguiente barra de botones:
 
 ![play_scene_bar_buttons](resources/play_scene_bar_buttons.png)
 
-Daremos click izquierdo sobre el botón de play ![play_scene_button](resources/play_scene_button.png) lo que hará nos aparezca la siguiente ventana en la cuál se nos pide seleccionar la escena principal en la que se debe iniciar la ejecución de nuestro videojuego:
+Daremos click izquierdo sobre el botón de play ![play_scene_button](resources/play_scene_button.png), esto es para ejecutar la escena desdé donde se debe de iniciar a ejecutar nuestro videojuego, pero antes de eso la primer vez que hacemos click izquierdo sobre ese botón, nos pedirá que seleccionemos la escena que se ejecutará por defecto cada vez que ejecutemos nuestro videojuego:
 
 ![select_scene_to_play_window_popup](resources/select_scene_to_play_window_popup.png)
 
-Nosotros seleccionaremos la escena World que es la escena que contiene el mapa y a nuestro jugador, para eso daremos click izquierdo sobre el botón **Select**, luego nos aparecerá una ventana del explorador de archivos, lo que debemos hacer será buscar el archivo **world.tscn** de la escena de mundo y seleccionarlo:
+Nosotros seleccionaremos la escena World, para hacer eso daremos click izquierdo sobre el botón **Select**, luego de eso nos aparecerá una ventana del explorador de archivos donde debemos buscar el archivo de la escena que queremos que se ejecute por defecto al iniciar nuestro videojuego, en este caso queremos que sea la escena World, por lo que debemos buscar el archivo **world.tscn** de la escena de mundo y seleccionarlo:
 
 ![select_and_play_world_scene](resources/select_and_play_world_scene.gif)
 
-Como podemos observar, una vez seleccionamos el archivo **world.tscn** de la escena World, se comenzará a ejecutar el videojuego desdé esa escena, donde podremos probar el funcionamiento de la lógica programada de las mecánicas de nuestro jugador.
+Como podemos observar, una vez hemos seleccioando el archivo **world.tscn** de la escena World, se comenzará a ejecutar el videojuego desdé esa escena, como en esta escena tenemos a nuestro personaje posicionado en el mapa, podremos probar el funcionamiento de la lógica que hemos programado en el script de las mecánicas de nuestro jugador, no sólo eso, si no que también vamos a poder hacer pruebas de las animaciones que vamos a implementar en la siguiente parte.
 
-El proceso de seleccionar la escena World como la escena principal desdé donde se comenzará a ejecutar nuestro videojuego sólo se hace una única vez, la próxima vez que demos click izquierdo sobre el botón play ![play_scene_button](resources/play_scene_button.png) para ejecutar, ya sólo se comenzará a ejecutar automáticamente desdé la escena que hemos seleccionado como escena de ejecución principal que en este caso es la escena World.
+### Animando a nuestro personaje
 
-### Animando a nuestro personaje - Animación de caminar
-
-Ahora que ya sabemos ejecutar nuestro videojuego desde la escena World para probar las mecánicas que hemos implementado en el script del personaje, vamos a implementar las animaciones de nuestro personaje.
-
-Para comenzar a trabajar en las animaciones de nuestro personaje, seleccionaremos el editor de escenas 2D, para eso nos iremos a la parte superior del editor:
+Para comenzar a trabajar en las animaciones de nuestro personaje, vamos a cambiar el editor actual al editor de escenas 2D, para eso, nos fijaremos en la parte superior del editor:
 
 ![select_2d_editor_from_script_editor](resources/select_2d_editor_from_script_editor.png)
 
-Y daremos click izquierdo en **2D** para seleccionar el editor de escenas 2D.
+Y daremos click izquierdo en **2D** para seleccionar el editor de escenas 2D, esto es porque para trabajar en las animaciones de nuestro personaje, vamos a necesitar visualizar a nuestro personaje en el editor para guiarnos mejor en el proceso de creación de las animaciones.
 
+Estas son las 3 animaciones que tendrá nuestro personaje:
+
+1. Animación de inactividad **idle_animation**:
+
+![idle_animation_panel](resources/idle_animation_panel.png)
+
+2. Animación de caminar **walk_animation**:
+
+![walk_animation_panel](resources/walk_animation_panel.png)
+
+3. Animación de saltar **jump_animation**:
+
+![jump_animation_panel](resources/jump_animation_panel.png)
+
+# Agregando la animación de caminar
 Para poder crear las animaciones de nuestro personaje, vamos a necesitar utilizar un nuevo nodo de tipo, el nodo AnimationPlayer:
 
 ![adding_animationplayer_node](resources/adding_animationplayer_node.png)
 
 Este nodo básicamente lo que hace es guardar la información de cada una de las animaciones de nuestro personaje, como el nombre de cada animación, el tipo de animación, el tiempo de duración total de la animación, la cantidad de frames, la organización y la duración de cada frame, etc.
 
-Luego de haber agregado el nodo AnimationPlayer a nuestro personaje, lo siguiente que haremos será crear la animacione de caminar **walk_animation** y la animación de saltar **jump_animation**.
-
-Para crear las animaciones, vamos a dar click izquierdo sobre el nodo AnimationPlayer para que nos aparezca el panel de edición de animaciones:
+Luego de haber agregado el nodo AnimationPlayer a nuestro personaje, lo siguiente que haremos será crear la animación de caminar **walk_animation**, vamos a dar click izquierdo sobre el nodo AnimationPlayer para que nos aparezca el panel de edición de animaciones:
 
 ![select_animationplayer_node](resources/select_animationplayer_node.gif)
 
-Siempre que queremos que nos aparezca ese panel de edición de animaciones, simplemente daremos click izquierdo sobre el nodo AnimationPlayer para seleccionarlo y abrir el panel de edición de animaciones.
+Cuando queramos que nos aparezca ese panel de edición de animaciones, simplemente daremos click izquierdo sobre el nodo AnimationPlayer para seleccionarlo, eso hará que de forma automática se abra ese panel de edición de animaciones.
 
-Luego en ese panel de edición de animaciones, daremos click izquierdo en el botón **Animation** que nos desplegará una lista de opciones para el manejo de animaciones, como crear, eliminar, duplicar, renombrar, etc:
+Ahora en el panel de edición de animaciones, daremos click izquierdo en el botón **Animation** que nos desplegará una lista de opciones para el manejo de animaciones, como crear, eliminar, duplicar, renombrar, etc:
 
 ![click_animation_button](resources/click_animation_button.png)
 
@@ -178,7 +190,7 @@ En este caso el nombre de la animación será **walk_animation**, ya que esta se
 ![animation_panel_after_new_animation](resources/animation_panel_after_new_animation.png)
 
 Ahora que ya hemos creado la nueva animación **walk_animation**, vamos a crear la pista o **track** de keyframes que compondrán la animación de caminar de nuestro personaje. 
-Un keyframe es básicamente el estado de un nodo en un momento determinado, como por ejemplo, cada frame que compone a una animación como la animación de caminar, cada uno representa un estado distinto del nodo en un momento determinado, de ese modo al tener varios keyframes organizados de forma continua(**track**) podemos componer una animación determinada.
+Un keyframe es básicamente el estado de un nodo en un momento determinado, como por ejemplo, cada frame que compone a una animación como la animación de caminar, representa un estado distinto del nodo en un momento determinado, de ese modo al tener varios keyframes organizados de forma continua(**track**) podemos componer una animación determinada.
 
 Para poder agregar los keyframes al **track** de la animación **walk_animation**, necesitaremos la ayuda de uno de los nodos que habíamos agregado anteriormente en la escena de nuestro personaje, el nodo Sprite2D que contiene la textura que le da el aspecto visual a nuestro personaje, lo que haremos será que estando en el panel de edición de animaciones con la animación **walk_animation** seleccionada, en el panel de edición de escena **Scene** vamos a seleccionar el nodo Sprite2D dando click izquierdo sobre él:
 
@@ -213,14 +225,178 @@ Ahora que ya hemos creado el primer keyframe de la animación de caminar, vamos 
 
 ![add_more_walk_animation_keyframes](resources/add_more_walk_animation_keyframes.gif)
 
-Con esto ya tendríamos los keyframes en el **track** de la animación de caminar, ahora lo que nos
-falta es establecer el tiempo de duración del **track**, en este caso lo estableceremos en 5 milisegundos, ya que son 4 keyframes donde cada uno se tarda 1 milisegundo en el **track**:
+Con esto ya tendríamos los keyframes en el **track** de la animación de caminar, ahora lo que nos falta es establecer el tiempo de duración del **track**, en este caso lo estableceremos en 5 milisegundos, ya que son 4 keyframes donde cada uno se tarda 1 milisegundo en el **track**, para hacer eso nos fijaremos en la siguiente parte del editor de animaciones:
+
+![time_duration_animation_panel_editor](resources/time_duration_animation_panel_editor.png)
+
+Lo cambiaremos a 0.5:
 
 ![set_track_duration_time](resources/set_track_duration_time.png)
+
+Luego de eso, para que la animación se reproduzca todo el tiempo de forma continua mientras el personaje está realizando una acción, debemos hacer también que la animación se autorrepita cada vez que termina de reproducirse la animación, para eso nos fijaremos en el siguiente botón:
+
+![autorepeat_animation_button_disable](resources/autorepeat_animation_button_disable.png)
+
+Daremos click izquierdo sobre ese botón y debería tomar una tonalidad azul claro de la siguiente manera:
+
+![autorepeat_animation_button_enable](resources/autorepeat_animation_button_enable.png)
+
+Con esto finalizariamos el proceso de creación de la animación de caminar **walk_animation**, y con el mismo proceso podemos crear el resto de animaciones de nuestro personaje o incluso de enemigos u objetos.
+
+### Programando las animaciones - Script Completo
+
+Ahora que ya hemos creado las animaciones de nuestro personaje, necesitamos programar en el script de nuestro personaje, cómo se reproducirán las animaciones en cada acción o estado de nuestro personaje, para eso, nos iremos al editor de scripts, y allí en el script del personaje
+lo que haremos será borrar el código que habíamos agregado de la parte de las mecánicas, y añadir el siguiente:
+
+```gdscript
+extends CharacterBody2D
+
+#######################################################################
+# Código fuente del script para manejar las mecánicas y estados del jugador.
+#
+# Mecánicas implementadas en este código:
+# 1. Mecánica de movimiento
+# 2. Mecánica de salto
+# 3. Actualización y reproducción de las animaciones
+# de acuerdo al estado del jugador en un momento determinado.
+######################################################################
+
+# Factor de gravedad
+@export var gravity: float = 20.0
+
+# Velocidad máxima del personaje
+@export var maxSpeed: float = 90.0
+
+# Máxima altura que se puede alcanzar en un salto
+@export var maxJumpHeight = 400.0
+
+# Animación actual del personaje
+@export var currentPlayerAnimation: String = "idle_animation"
+
+# Variable para comprobar si el jugador está tocando el suelo
+var isOnFloor: bool = false
+
+# Variable para comprobar si el jugador se está moviendo
+var playerIsMoving: bool = false
+
+# Variable para comprobar la dirección del jugador y saber si se
+# debe voltear horizontalmente la animación
+var flip_horizontal_animation: bool = false
+
+# Dirección del personaje
+var direction: Vector2 = Vector2(0,0)
+
+# Nodo del sprite del personaje
+@onready var sprite: Sprite2D = $Sprite2D
+
+# Nodo de animaciones del personaje
+@onready var animations: AnimationPlayer = $AnimationPlayer
+
+# Función para actualizar la dirección de avance del personaje en relación a las teclas
+# que se hayan presionado.
+func updatePlayerDirectionByInput():
+	direction = Input.get_vector( "ui_left", "ui_right", "ui_up", "ui_down" )
+
+# Función para manejar los eventos de entrada del teclado
+func handleInputEvents():
+	updatePlayerDirectionByInput()
+	if Input.is_key_pressed(KEY_ESCAPE):
+		get_tree().quit()
+
+# Actualiza las variables que indican en que estado se encuentra el personaje
+func updatePlayerState():
+	isOnFloor = is_on_floor()
+
+# Función para realizar la acción de salto
+func performJumpAction():
+	velocity.y -= maxJumpHeight
+
+# Función para actualizar sólo la velocidad horizontal
+func updateHorizontalPlayerVelocity():
+	velocity.x = direction.x * maxSpeed
+
+# Función para actualizar sólo la velocidad vertical
+# acá se implementa la mecánica de salto.
+func updateVerticalPlayerVelocity():
+	if isOnFloor and direction.y < 0.0:
+		performJumpAction()
+
+# Función para actualizar la velocidad del personaje
+func updatePlayerVelocity():
+	updateHorizontalPlayerVelocity()
+	updateVerticalPlayerVelocity()
+
+# Función para aplicar el factor de gravedad
+func applyGravity():
+	velocity.y += gravity
+
+# Función para actualizar la física de nuestro personaje
+func updatePlayerPhysics():
+	if !isOnFloor:
+		applyGravity()
+
+# Función para comprobar si el jugador se está moviendo
+func checkPlayerIsMoving():
+	return velocity.length() != 0.0 or !isOnFloor
+	
+# Función para parar la animación del personaje
+func stopPlayerAnimation():
+	animations.stop()
+
+# Función para reproducir la animación actual del personaje
+func playPlayerAnimation():
+	animations.play(currentPlayerAnimation)
+
+# Función para comprobar si la velocidad horizontal del
+# jugador es diferente de cero.
+func checkPlayerHorizontalVelocity():
+	return velocity.x != 0.0
+
+# Función para comprobar la dirección horizontal del jugador
+func checkPlayerHorizontalDirection():
+	if checkPlayerHorizontalVelocity():
+		sprite.flip_h = velocity.x < 0.0
+
+# Función para establecer la animación actual del jugador
+func setPlayerCurrentAnimation( animationName: String = "idle" ):
+	currentPlayerAnimation = animationName + "_animation"
+
+# Función para comprobar y seleccionar la animación actual 
+# del personaje en relación a su movimiento
+func checkCurrentPlayerAnimation():
+	if !checkPlayerIsMoving():
+		setPlayerCurrentAnimation()
+		return
+	
+	checkPlayerHorizontalDirection()
+	
+	if isOnFloor and checkPlayerHorizontalVelocity():
+		setPlayerCurrentAnimation("walk")
+		return
+	
+	setPlayerCurrentAnimation("jump")
+	
+
+# Función para actualizar las animaciones del personaje
+func updatePlayerAnimations():
+	checkCurrentPlayerAnimation()
+	playPlayerAnimation()
+
+# Función que se encarga del proceso físico del personaje
+func _physics_process(_delta):
+	handleInputEvents()
+	updatePlayerState()
+	updatePlayerVelocity()
+	updatePlayerAnimations()
+	updatePlayerPhysics()
+	move_and_slide()
+```
+
+
+
+### Conclusión
+### Siguiente Parte
 
 
 ### Agregando una hitbox a nuestro personaje
 ### Respondiendo a señales
-### Script completo
-### Conclusión
-### Siguiente Parte
