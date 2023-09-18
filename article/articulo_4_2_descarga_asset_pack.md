@@ -1,4 +1,4 @@
-# Godot Engine 4: Crea tú primer videojuego con Godot Engine 4 desdé cero
+# Godot Engine 4: Crea tú primer videojuego con Godot Engine 4 desde cero
 ## Parte 2: Agregando los recursos para nuestro videojuego
 
 ![viewport_zoom_slide](resources/viewport_zoom_slide.png)
@@ -10,10 +10,10 @@
 - [Siguiente parte](#siguiente-parte)
 
 ## Introducción
-Ahora que ya hemos visto una breve una introducción a la interfaz gráfica del editor de Godot y tenemos una noción de los conceptos básicos de Godot, podemos comenzar a crear nuestro propio videojuego con las herramientas que nos ofrece. 
+Ahora que ya hemos visto una breve una introducción a la interfaz gráfica del editor de Godot y tenemos una noción de los conceptos básicos de Godot, podemos comenzar a crear nuestro propio videojuego con las herramientas que nos ofrece Godot. 
 
 ## Descargando el asset pack
-Primero descargaremos un paqueté de recursos(assets pack) que utilizaremos en el desarrollo de nuestro videojuego, en este caso utilizaremos el asset pack de uso líbre y gratuito del proyecto [Mega Bot](https://ansimuz.itch.io/mega-bot) que es un videojuego al estilo Mega Man.
+Primero descargaremos un paquete de recursos(assets pack) que utilizaremos en el desarrollo de nuestro videojuego, en este caso utilizaremos el asset pack de uso líbre y gratuito del proyecto [Mega Bot](https://ansimuz.itch.io/mega-bot) que es un videojuego al estilo Mega Man.
 
 Enlace: https://ansimuz.itch.io/mega-bot
 

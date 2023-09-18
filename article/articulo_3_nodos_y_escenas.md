@@ -47,7 +47,7 @@ En Godot tenemos la posibilidad de decirle a los nodos como se deben de comporta
 En este artículo hemos aprendido sobre los conceptos fundamentales de nodo y escena en Godot y su importancia en el desarrollo de videojuegos, también aprendimos un poco sobre lo que es GDScript y su uso.
 
 ## Siguiente artículo: Creando un videojuego 2D en Godot
-En el siguiente artículo veremos cómo crear nuestro primer videojuego 2D en godot
+En el siguiente artículo veremos la primer parte de cómo crear nuestro primer videojuego 2D en godot
 y verémos en práctica los conceptos de nodo y escena:
 
 [Godot Engine 4: Crea tú primer videojuego con Godot Engine 4 desdé cero](articulo_4_1_introduccion_creando_un_videojuego.md)
