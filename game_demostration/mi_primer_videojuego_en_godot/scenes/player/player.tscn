@@ -1,27 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://nmd8ybgsqu1o"]
+[gd_scene load_steps=9 format=3 uid="uid://nmd8ybgsqu1o"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_044j2"]
 [ext_resource type="Texture2D" uid="uid://6144soweexwn" path="res://resources/megabot assets files/Sprites/player.png" id="1_gl3is"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqgkq"]
 size = Vector2(18, 23)
-
-[sub_resource type="Animation" id="Animation_kja74"]
-resource_name = "walk_animation"
-length = 0.5
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [8, 0, 1, 2, 3]
-}
 
 [sub_resource type="Animation" id="Animation_sudld"]
 resource_name = "idle_animation"
@@ -57,12 +40,32 @@ tracks/0/keys = {
 "values": [10]
 }
 
+[sub_resource type="Animation" id="Animation_kja74"]
+resource_name = "walk_animation"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [8, 0, 1, 2, 3]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_scddk"]
 _data = {
 "idle_animation": SubResource("Animation_sudld"),
 "jump_animation": SubResource("Animation_3kp5l"),
 "walk_animation": SubResource("Animation_kja74")
 }
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqkj7"]
+size = Vector2(18, 23)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_044j2")
@@ -81,3 +84,11 @@ shape = SubResource("RectangleShape2D_hqgkq")
 libraries = {
 "": SubResource("AnimationLibrary_scddk")
 }
+
+[node name="hitbox_player" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox_player"]
+position = Vector2(-1, 2.5)
+shape = SubResource("RectangleShape2D_lqkj7")
+
+[connection signal="area_entered" from="hitbox_player" to="." method="_on_hitbox_player_area_entered"]

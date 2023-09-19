@@ -8,7 +8,8 @@
 - [Agregando la animación de caminar](#agregando-la-animación-de-caminar)
 - [Agregando los keyframes de la animación de caminar](#agregando-los-keyframes-de-la-animación-de-caminar)
 - [Programando las animaciones - Script Completo](#programando-las-animaciones---script-completo)
-
+- [Conclusión](#conclusión)
+- [Siguiente parte](#siguiente-parte)
 
 ## Introducción
 

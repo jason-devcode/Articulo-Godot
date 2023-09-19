@@ -8,6 +8,7 @@ extends CharacterBody2D
 # 2. Mecánica de salto
 # 3. Actualización y reproducción de las animaciones
 # de acuerdo al estado del jugador en un momento determinado.
+# 4. Manejo de la señal de detección de áreas de la hitbox
 ######################################################################
 
 # Factor de gravedad
@@ -139,3 +140,11 @@ func _physics_process(_delta):
 	updatePlayerAnimations()
 	updatePlayerPhysics()
 	move_and_slide()
+
+# Función que se encarga de manejar la señal emitida
+# por el nodo de la hitbox al nodo del jugador.
+func _on_hitbox_player_area_entered(area):
+	# Detectar sólo las áreas de las hitbox de los enemigos
+	if area.name == "hitbox_enemy":
+		get_tree().reload_current_scene()
+

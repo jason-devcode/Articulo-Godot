@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://ck6mj17vvl73b"]
+
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_86xbg"]
+[ext_resource type="Texture2D" uid="uid://cs2xkbxr0p507" path="res://resources/megabot assets files/Sprites/enemy/enemy1.png" id="2_p8ckw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v1nwr"]
+size = Vector2(20, 21)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5auf5"]
+radius = 82.1523
+
+[node name="Enemy" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_86xbg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_p8ckw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -1.5)
+shape = SubResource("RectangleShape2D_v1nwr")
+
+[node name="hitbox_enemy" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox_enemy"]
+position = Vector2(-1, -1.5)
+shape = SubResource("RectangleShape2D_v1nwr")
+
+[node name="detect_zone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detect_zone"]
+shape = SubResource("CircleShape2D_5auf5")
+
+[connection signal="area_entered" from="detect_zone" to="." method="_on_detect_zone_area_entered"]

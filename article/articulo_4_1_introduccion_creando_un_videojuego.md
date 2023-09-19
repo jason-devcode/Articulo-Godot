@@ -10,15 +10,15 @@
 - [Siguiente parte](#siguiente-parte)
 
 ## Introducción
-En el [artículo anterior](articulo_3_nodos_y_escenas.md) aprendimos lo básico sobre los nodos y las escenas, sin embargo no vimos como crearlos y utilizarlos, en este artículo vamos crear nuestro primer videojuego con todo lo que hemos visto hasta ahora, veremos por ejemplo como crear las escenas y nodos para el jugador, los enemigos, y un nivel usandola para demostrar como funcionan las **estructuras de escenas y nodos** en Godot.
+En el [artículo anterior](articulo_3_nodos_y_escenas.md) aprendimos lo básico sobre los nodos y las escenas, sin embargo no vimos como crearlos y utilizarlos, en este artículo vamos crear nuestro primer videojuego con todo lo que hemos visto hasta ahora, veremos por ejemplo como crear las escenas y nodos para el jugador, los enemigos, y un nivel usandolos para demostrar como funcionan las **estructuras de escenas y nodos** en Godot.
 
 Antes de comenzar veamos cuales serán los elementos básicos que tendrá nuestro videojuego:
 
-1. Un personaje jugable
-2. Un nivel con un gameplay basico
-3. Enemigos con mecanicas sencillas
+1. Un personaje controlable.
+2. Un nivel con un gameplay basico.
+3. Enemigos con mecanicas sencillas.
 
-Este artículo está subdivido en 5 partes dónde en cada parte nos enfocamos en un tema diferente en el proceso de la creación de nuestro primer videojuego:
+Este artículo está subdivido en 8 partes donde en cada parte nos enfocaremos en un tema diferente en el proceso de la creación de nuestro primer videojuego:
 
 1. [Parte 1: Introducción](articulo_4_1_introduccion_creando_un_videojuego.md)
 2. [Parte 2: Agregando los recursos para nuestro videojuego](articulo_4_2_descarga_asset_pack.md)
@@ -27,12 +27,13 @@ Este artículo está subdivido en 5 partes dónde en cada parte nos enfocamos en
 5. [Parte 5: Agregando movimiento a nuestro personaje](articulo_4_5_agregando_movimiento.md)
 6. [Parte 6: Agregando animaciones a nuestro personaje](articulo_4_6_agregando_animaciones.md)
 7. [Parte 7: Agregando una hitbox a nuestro personaje](articulo_4_7_agregando_hitbox.md)
-8. [Parte 8: Creación de la escena enemigo](articulo_4_8_escena_enemigo.md)
+8. [Parte 8 (final): Creación de la escena enemigo](articulo_4_8_escena_enemigo.md)
 
 **¡Empezemos!**
 
 ## Creando el proyecto para nuestro videojuego
 Primero vamos a crear el proyecto para nuestro primer videojuego en Godot, en el [segundo artículo de esta serie](articulo_2_introduccion_a_godot.md#creando-un-nuevo-proyecto-en-godot) vimos cómo crear un proyecto en Godot por lo que en este artículo no vamos a profundizar mucho en esta parte.
+
 ![project_creation_popup](resources/project_creation_popup.png)
 
 ### Veamos una breve introducción a la interfaz gráfica del editor
@@ -48,7 +49,7 @@ En la parte superior veremos un panel con las siguientes opciones:
 * La opción Scripts es para abrir la interfaz del editor de scripts.
 * La opción Asset Libs es para abrir el navegador de assets y librerías en línea qué podemos utilizar en nuestro proyecto.
 
-En este artículo nos centraremos principalmente en la opción de 2D y la opción Scripts.
+En esta serie de artículos nos centraremos principalmente en la opción de 2D y la opción Scripts.
 
 Seleccionamos la opción 2D y nos quedará de la siguiente forma:
 ![top_option_2d_selected](resources/top_option_2d_selected.png)
@@ -58,7 +59,7 @@ Podremos observar varios paneles de edición de nodos y escenas, administración
 En este artículo no vamos a profundizar mucho sobre cada uno de los componentes de la interfaz gráfica del editor de Godot más allá de los que vamos a utilizar, por lo que si quieres aprender más sobre cada uno de estos componentes te recomiendo leer la [documentación óficial de godot sobre la interfaz gráfica](https://docs.godotengine.org/es/stable/getting_started/introduction/first_look_at_the_editor.html) o buscar tutoriales y cursos en linea.
 
 ## Conclusión
-En este artículo hemos aprendido lo básico sobre los componentes gráficos de la interfaz de Godot y hemos creado un nuevo proyecto para el desarrollo de nuestro videojuego.
+En este artículo hemos aprendido lo básico sobre los componentes gráficos de la interfaz de Godot y hemos creado un nuevo proyecto para el desarrollo de nuestro videojuego, además hemos definido los componentes básicos que vamos a crear para nuestro videojuego.
 
 ## Siguiente parte:
 En la siguiente parte veremos como descargar los asset pack para nuestro videojuego y colocarlos en nuestro proyecto para poder utilizarlos:

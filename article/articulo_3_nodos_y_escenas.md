@@ -25,6 +25,7 @@ Godot Engine nos ofrece un sistema de escenas y nodos versátiles y fléxbiles, 
 Los nodos son los bloques de construcción que componen todos los elementos de nuestros videojuegos, como los enemigos, el mapa, el jugador, las texturas, los sonidos, etc. Además un mismo nodo se puede reutilizar la cantidad de veces que sea requerido y a su vez también pueden contener a otros nodos que complementen sus características y funcionalidades, verémos ejemplos detallados con demostraciones en el [Siguiente artículo](articulo_4_1_introduccion_creando_un_videojuego.md).
 
 Ejemplo de una lista de nodos de Godot:
+
 ![node_types_example](resources/node_types_example.png)
 
 Godot nos provee de una gran variedad de nodos, aunque sólo utilizaremos los necesarios.
